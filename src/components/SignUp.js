@@ -1,19 +1,19 @@
 import React from 'react';
 import NavigationBar from "../components/NavigationBar";
 import Footer from "../components/Footer";
-import Login from "../components/Login";
+import SignUpPage from "../pages/SingUpPage";
 
-class LoginPage extends React.Component {
+class SignUp extends React.Component {
 
     render()
     {
         return(
             <div>
                 <NavigationBar/>
-                    <Login/>
+                <SignUpPage/>
                 <Footer/>
             </div>)
     }
 }
 
-export default LoginPage;
+export default SignUp;
