@@ -9,9 +9,9 @@ class HomePage extends React.Component {
         return(
             <div>
                 <NavigationBar/>
-                <div className="container">
+                    <div className="wrapper">
 
-                </div>
+                    </div>
                 <Footer/>
             </div>)
     }

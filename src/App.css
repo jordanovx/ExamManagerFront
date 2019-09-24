@@ -26,7 +26,10 @@
   background-color:#282c34;
   min-height:80px;
 }
-.container {
+.wrapper {
   min-height: 500px;
   color: #ccc;
+  width: 100%;
+  margin: 0 auto;
+  background-color:#cccccc;
 }

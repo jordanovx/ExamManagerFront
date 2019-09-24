@@ -6,7 +6,7 @@ class Footer extends React.Component {
     {
         return(
             <div className="footer">
-                Just a footer
+               Финки {new Date().getFullYear()}
             </div>)
     }
 }
