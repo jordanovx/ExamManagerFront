@@ -9,7 +9,9 @@ class HomePage extends React.Component {
         return(
             <div>
                 <NavigationBar/>
+                <div className="container">
 
+                </div>
                 <Footer/>
             </div>)
     }

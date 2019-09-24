@@ -20,3 +20,13 @@
 .App-link {
   color: #09d3ac;
 }
+.footer {
+  width: 100%;
+  color: white;
+  background-color:#282c34;
+  min-height:80px;
+}
+.container {
+  min-height: 500px;
+  color: #ccc;
+}

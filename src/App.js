@@ -9,11 +9,12 @@ import SignUpPage from "./pages/SingUpPage";
 import ClassroomsPage from "./pages/ClassroomsPage";
 import TeachersPage from "./pages/TeachersPage";
 import TimetablePage from "./pages/TimetablePage";
+import Header from "./components/Header";
 
 function App() {
   return (
     <div className="App">
-
+            <Header/>
             <BrowserRouter>
                 <Route path="/" exact component={HomePage}/>
                 <Route path="/login" component={LoginPage} />
