@@ -25,11 +25,41 @@
   color: white;
   background-color:#282c34;
   min-height:80px;
+
 }
 .wrapper {
   min-height: 500px;
   color: #ccc;
   width: 100%;
   margin: 0 auto;
-  background-color:#cccccc;
+
+}
+.loginWrapper
+{
+  width: 400px;
+  border: 1px solid #ccc;
+  border-radius: 0px 4px 0px 4px;
+  padding: 20px;
+  margin: 30px auto 30px;
+
+}
+
+.classroomsTable{
+  width: 60%;
+  margin:  0 auto;
+  padding: 20px;
+}
+
+.classroomWrapper{
+  width: 400px;
+  border: 1px solid #ccc;
+  border-radius: 0px 4px 0px 4px;
+  padding: 20px;
+  margin: 30px auto 30px;
+
+}
+.timetable-select{
+  width: 190px;
+
+
 }

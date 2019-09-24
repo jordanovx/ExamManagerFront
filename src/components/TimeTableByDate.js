@@ -1,24 +1,22 @@
 import React from 'react';
-import NavigationBar from "../components/NavigationBar";
-import Footer from "../components/Footer";
-import {Table} from "react-bootstrap";
+import {Form, Table} from "react-bootstrap";
 
-class TeachersPage extends React.Component {
+class TimeTableByDate extends React.Component {
+
 
     render()
     {
         return(
             <div>
-                <NavigationBar/>
-                    <div className="wrapper">
+                <div className="wrapper">
 
-                        <div className="classroomsTable">
+
                         <Table striped bordered hover>
                             <thead>
                             <tr>
                                 <th></th>
-                                <th>Име на професор</th>
-                                <th>Презиме</th>
+                                <th>Датум</th>
+                                <th></th>
                             </tr>
                             </thead>
                             <tbody>
@@ -35,11 +33,10 @@ class TeachersPage extends React.Component {
                             </tr>
                             </tbody>
                         </Table>
-                        </div>
-                    </div>
-                <Footer/>
+
+                </div>
             </div>)
     }
 }
 
-export default TeachersPage;
+export default TimeTableByDate;

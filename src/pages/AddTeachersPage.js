@@ -1,10 +1,10 @@
 import React from 'react';
 import NavigationBar from "../components/NavigationBar";
 import Footer from "../components/Footer";
+import Form from "react-bootstrap/Form";
+import Button from "react-bootstrap/Button";
 
-import {Table} from 'react-bootstrap';
-
-class ClassroomsPage extends React.Component {
+class AddTeachersPage extends React.Component {
 
     constructor(props) {
         super(props);
@@ -49,36 +49,26 @@ class ClassroomsPage extends React.Component {
             <div>
                 <NavigationBar/>
                 <div className="wrapper">
-                    <div className="classroomsTable">
-                    <Table striped bordered hover>
-                        <thead>
-                        <tr>
-                            <th></th>
-                            <th>Име на просторија</th>
-                            <th>Капацитет</th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                        <tr>
-                            <td>1</td>
-                            <td>Mark</td>
-                            <td>Otto</td>
-
-                        </tr>
-                        <tr>
-                            <td>2</td>
-                            <td>Jacob</td>
-                            <td>Thornton</td>
-                        </tr>
-                        </tbody>
-                    </Table>
-
-                    {this.state.data};
+                    <div className="classroomWrapper">
+                        <Form>
+                            <Form.Group controlId="formGroupEmail">
+                                <Form.Label>Име</Form.Label>
+                                <Form.Control type="text" placeholder="Внеси име на професор" />
+                                <Form.Group controlId="formGroupPassword">
+                                    <Form.Label>Презиме</Form.Label>
+                                    <Form.Control type="text" placeholder="Внеси презиме на професор" />
+                                </Form.Group>
+                            </Form.Group>
+                            <Form.Group>
+                                <Button type="btn-primary">Додади</Button>
+                            </Form.Group>
+                        </Form>
                     </div>
                 </div>
                 <Footer/>
-            </div>)
+            </div>
+        )
     }
 }
 
-export default ClassroomsPage;
+export default AddTeachersPage;

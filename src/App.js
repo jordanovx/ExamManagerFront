@@ -10,6 +10,9 @@ import ClassroomsPage from "./pages/ClassroomsPage";
 import TeachersPage from "./pages/TeachersPage";
 import TimetablePage from "./pages/TimetablePage";
 import Header from "./components/Header";
+import AddClassroomPage from "./pages/AddClassroomPage";
+import AddTeachersPage from "./pages/AddTeachersPage";
+import AddTimeTablePage from "./pages/AddTimeTablePage";
 
 function App() {
   return (
@@ -22,6 +25,9 @@ function App() {
                 <Route path="/classrooms" component={ClassroomsPage} />
                 <Route path="/teachers" component={TeachersPage} />
                 <Route path="/timetable" component={TimetablePage} />
+                <Route path="/addclassroom" component={AddClassroomPage} />
+                <Route path="/addteachers" component={AddTeachersPage} />
+                <Route path="/addtimetable" component={AddTimeTablePage} />
             </BrowserRouter>
 
     </div>
