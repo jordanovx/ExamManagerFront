@@ -22,7 +22,9 @@ class Login extends React.Component {
             <Button variant="outline-primary" type="btn-primary">
               Најави се
             </Button>
-            <Button type="btn-secondary">Регистрирај се</Button>
+            <Button type="btn-secondary" href="/signup">
+              Регистрирај се!
+            </Button>
           </Form.Group>
         </Form>
       </div>
