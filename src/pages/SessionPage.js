@@ -42,7 +42,7 @@ class SessionPage extends React.Component {
         <NavigationBar />
         <Breadcrumb className="troski">
           <Breadcrumb.Item href="/">Почетна</Breadcrumb.Item>
-          <Breadcrumb.Item href="/teachers">Професори</Breadcrumb.Item>
+          <Breadcrumb.Item href="/session">Сесии</Breadcrumb.Item>
           <Breadcrumb.Item active>Преглед</Breadcrumb.Item>
         </Breadcrumb>
         <div className="wrapper">

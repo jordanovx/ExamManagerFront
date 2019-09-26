@@ -58,7 +58,7 @@ class AddSessionPage extends React.Component {
         <NavigationBar />
         <Breadcrumb className="troski">
           <Breadcrumb.Item href="/">Почетна</Breadcrumb.Item>
-          <Breadcrumb.Item href="/addclassroom">Просторија</Breadcrumb.Item>
+          <Breadcrumb.Item href="/session">Сесии</Breadcrumb.Item>
           <Breadcrumb.Item active>Додади</Breadcrumb.Item>
         </Breadcrumb>
         <div className="wrapper">

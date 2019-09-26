@@ -63,15 +63,10 @@
 }
 
 .kopce .btn {
-  width: 200px;
-  height: 150px;
+  width: 260px;
+  height: 170px;
   color: white;
 }
-
-.kopce a {
-  color: red;
-}
-
 
 .wrapper {
   min-height: 730px;
