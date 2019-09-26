@@ -1,7 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { Button } from "react-bootstrap";
-import { FaUserTie, FaRegCalendarPlus, FaWindowRestore } from "react-icons/fa";
+import {
+  FaUserTie,
+  FaRegCalendarPlus,
+  FaWindowRestore,
+  FaBook
+} from "react-icons/fa";
 
 class ButtonHome extends React.Component {
   render() {
@@ -22,6 +27,14 @@ class ButtonHome extends React.Component {
               <Button type="button" variant="info" block>
                 <FaWindowRestore size={70} /> <br />
                 Додади просторија
+              </Button>
+            </div>
+          </Link>
+          <Link to="/addsubjects">
+            <div className="kopce btn">
+              <Button type="button" variant="info" block>
+                <FaBook size={70} /> <br />
+                Додади Предмет
               </Button>
             </div>
           </Link>

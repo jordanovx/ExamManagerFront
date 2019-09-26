@@ -4,7 +4,7 @@ import Footer from "../components/Footer";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 import Breadcrumb from "react-bootstrap/Breadcrumb";
-class AddClassroomPage extends React.Component {
+class AddSubjectsPage extends React.Component {
   constructor(props) {
     super(props);
     this.state = { data: "No data" };
@@ -46,22 +46,29 @@ class AddClassroomPage extends React.Component {
         <NavigationBar />
         <Breadcrumb className="troski">
           <Breadcrumb.Item href="/">Почетна</Breadcrumb.Item>
-          <Breadcrumb.Item href="/addclassroom">Просторија</Breadcrumb.Item>
+          <Breadcrumb.Item href="/addsubjects">Предмети</Breadcrumb.Item>
           <Breadcrumb.Item active>Додади</Breadcrumb.Item>
         </Breadcrumb>
         <div className="wrapper">
           <div className="loginWrapper">
             <Form>
-              <Form.Group controlId="formGroupEmail">
+              <Form.Group controlId="formGroupIme">
                 <Form.Label>Име</Form.Label>
                 <Form.Control
                   type="text"
-                  placeholder="Внеси име на просторија"
+                  placeholder="Внеси име на предметот"
                 />
-                <Form.Group controlId="formGroupPassword">
-                  <Form.Label>Капацитет</Form.Label>
-                  <Form.Control type="text" placeholder="Внеси капацитет" />
-                </Form.Group>
+              </Form.Group>
+              <Form.Group controlId="formGroupSemester">
+                <Form.Label>Семестар</Form.Label>
+                <Form.Control as="select">
+                  <option>Летен</option>
+                  <option>Зимски</option>
+                </Form.Control>
+              </Form.Group>
+              <Form.Group controlId="formGroupSession">
+                <Form.Label>Сесија</Form.Label>
+                <Form.Control type="text" placeholder="Внеси ја сесијата" />
               </Form.Group>
               <Form.Group>
                 <Button type="btn-primary">Додади</Button>
@@ -75,4 +82,4 @@ class AddClassroomPage extends React.Component {
   }
 }
 
-export default AddClassroomPage;
+export default AddSubjectsPage;

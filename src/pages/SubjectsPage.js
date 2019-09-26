@@ -1,10 +1,11 @@
 import React from "react";
 import NavigationBar from "../components/NavigationBar";
 import Footer from "../components/Footer";
-import Form from "react-bootstrap/Form";
-import Button from "react-bootstrap/Button";
+
+import { Table } from "react-bootstrap";
 import Breadcrumb from "react-bootstrap/Breadcrumb";
-class AddClassroomPage extends React.Component {
+
+class SubjectsPage extends React.Component {
   constructor(props) {
     super(props);
     this.state = { data: "No data" };
@@ -46,27 +47,35 @@ class AddClassroomPage extends React.Component {
         <NavigationBar />
         <Breadcrumb className="troski">
           <Breadcrumb.Item href="/">Почетна</Breadcrumb.Item>
-          <Breadcrumb.Item href="/addclassroom">Просторија</Breadcrumb.Item>
-          <Breadcrumb.Item active>Додади</Breadcrumb.Item>
+          <Breadcrumb.Item href="/subjects">Предмети</Breadcrumb.Item>
+          <Breadcrumb.Item active>Преглед</Breadcrumb.Item>
         </Breadcrumb>
         <div className="wrapper">
-          <div className="loginWrapper">
-            <Form>
-              <Form.Group controlId="formGroupEmail">
-                <Form.Label>Име</Form.Label>
-                <Form.Control
-                  type="text"
-                  placeholder="Внеси име на просторија"
-                />
-                <Form.Group controlId="formGroupPassword">
-                  <Form.Label>Капацитет</Form.Label>
-                  <Form.Control type="text" placeholder="Внеси капацитет" />
-                </Form.Group>
-              </Form.Group>
-              <Form.Group>
-                <Button type="btn-primary">Додади</Button>
-              </Form.Group>
-            </Form>
+          <div className="classroomsTable">
+            <Table striped bordered hover>
+              <thead>
+                <tr>
+                  <th></th>
+                  <th>Име на предмет</th>
+                  <th>Семестар</th>
+                  <th>Сесија</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>Mark</td>
+                  <td>Otto</td>
+                  <td>Јунска</td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>Jacob</td>
+                  <td>Thornton</td>
+                </tr>
+              </tbody>
+            </Table>
+            {this.state.data};
           </div>
         </div>
         <Footer />
@@ -75,4 +84,4 @@ class AddClassroomPage extends React.Component {
   }
 }
 
-export default AddClassroomPage;
+export default SubjectsPage;

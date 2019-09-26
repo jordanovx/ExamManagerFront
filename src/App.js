@@ -13,7 +13,8 @@ import Header from "./components/Header";
 import AddClassroomPage from "./pages/AddClassroomPage";
 import AddTeachersPage from "./pages/AddTeachersPage";
 import AddTimeTablePage from "./pages/AddTimeTablePage";
-
+import AddSubjectsPage from "./pages/AddSubjectsPage";
+import SubjectsPage from "./pages/SubjectsPage";
 function App() {
   return (
     <div className="App">
@@ -28,6 +29,8 @@ function App() {
         <Route path="/addclassroom" component={AddClassroomPage} />
         <Route path="/addteachers" component={AddTeachersPage} />
         <Route path="/addtimetable" component={AddTimeTablePage} />
+        <Route path="/subjects" component={SubjectsPage} />
+        <Route path="/addsubjects" component={AddSubjectsPage} />
       </BrowserRouter>
     </div>
   );

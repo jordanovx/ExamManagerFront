@@ -51,7 +51,7 @@ class AddTeachersPage extends React.Component {
           <Breadcrumb.Item active>Додади</Breadcrumb.Item>
         </Breadcrumb>
         <div className="wrapper">
-          <div className="classroomWrapper">
+          <div className="loginWrapper">
             <Form>
               <Form.Group controlId="formGroupEmail">
                 <Form.Label>Име</Form.Label>

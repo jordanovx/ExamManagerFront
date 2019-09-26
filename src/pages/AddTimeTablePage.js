@@ -51,11 +51,14 @@ class AddTimeTablePage extends React.Component {
           <Breadcrumb.Item active>Додади</Breadcrumb.Item>
         </Breadcrumb>
         <div className="wrapper">
-          <div className="classroomWrapper">
+          <div className="loginWrapper">
             <Form>
-              <Form.Group controlId="formGroupSubject">
-                <Form.Label>Предмет</Form.Label>
-                <Form.Control type="text" placeholder="избери предмет" />
+              <Form.Group controlId="formGroupPredmet">
+                <Form.Label>Предмет </Form.Label>
+                <Form.Control as="select">
+                  <option>..1..</option>
+                  <option>..2..</option>
+                </Form.Control>
               </Form.Group>
               <Form.Group controlId="formGroupSemester">
                 <Form.Label>Семестар</Form.Label>

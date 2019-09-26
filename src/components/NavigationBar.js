@@ -20,6 +20,10 @@ class NavigationBar extends React.Component {
               <NavDropdown.Item href="/classrooms">Преглед</NavDropdown.Item>
               <NavDropdown.Item href="/addclassroom">Додади</NavDropdown.Item>
             </NavDropdown>
+            <NavDropdown title="Предмети" id="collasible-nav-dropdown">
+              <NavDropdown.Item href="/subjects">Преглед</NavDropdown.Item>
+              <NavDropdown.Item href="/addsubjects">Додади</NavDropdown.Item>
+            </NavDropdown>
             <NavDropdown title="Распоред" id="collasible-nav-dropdown">
               <NavDropdown.Item href="/timetable">Преглед</NavDropdown.Item>
               <NavDropdown.Item href="/addTimeTable">Додади</NavDropdown.Item>
