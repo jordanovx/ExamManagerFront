@@ -8,23 +8,35 @@ import Breadcrumb from "react-bootstrap/Breadcrumb";
 class AddTeachersPage extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { data: "No data" };
+    this.state = { name: "" };
+    this.state = { surname: ""};
   }
 
-  getClassrooms() {
-    fetch("http://localhost:8080/classrooms", {
-      mode: "cors",
+  addTeacher(event) {
+    event.preventDefault();
 
-      method: "GET",
+      let params = {
+          name: this.state.name,
+          surname: this.state.surname,
+          abilities: ""
+      };
+
+      const searchParams = Object.keys(params).map((key) => {
+          return encodeURIComponent(key) + '=' + encodeURIComponent(params[key]);
+      }).join('&');
+
+    fetch("http://localhost:8080/professors/add?" + searchParams, {
+      mode: "cors",
+      method: "POST",
       headers: {
         Accept: "application/json",
-        "Content-Type": "application/json"
-        // 'Content-Type': 'application/x-www-form-urlencoded',
+        //"Content-Type": "application/json"
+         'Content-Type': 'application/x-www-form-urlencoded',
       }
     })
       .then(res => res.text())
       .then(
-        result => {
+          (result) => {
           console.log(result);
           this.setState({ data: result });
         },
@@ -33,14 +45,16 @@ class AddTeachersPage extends React.Component {
           console.log(error);
         }
       );
-    return "alo";
   }
 
-  componentDidMount() {
-    console.log("Mounted");
-    console.log(this.getClassrooms());
+  handleNameChange(event)
+  {
+    this.setState({name: event.target.value});
   }
-
+  handleSurnameChange(event)
+  {
+    this.setState({surname: event.target.value});
+  }
   render() {
     return (
       <div>
@@ -52,16 +66,17 @@ class AddTeachersPage extends React.Component {
         </Breadcrumb>
         <div className="wrapper">
           <div className="loginWrapper">
-            <Form>
+            <Form onSubmit={this.addTeacher.bind(this)}>
               <Form.Group controlId="formGroupEmail">
                 <Form.Label>Име</Form.Label>
-                <Form.Control type="text" placeholder="Внеси име на професор" />
+                <Form.Control type="text" placeholder="Внеси име на професор"
+                onChange={this.handleNameChange.bind(this)}/>
                 <Form.Group controlId="formGroupPassword">
                   <Form.Label>Презиме</Form.Label>
                   <Form.Control
                     type="text"
                     placeholder="Внеси презиме на професор"
-                  />
+                  onChange={this.handleSurnameChange.bind(this)}/>
                 </Form.Group>
               </Form.Group>
               <Form.Group>

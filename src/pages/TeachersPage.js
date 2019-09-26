@@ -12,7 +12,7 @@ class TeachersPage extends React.Component {
     }
 
     getTeachers() {
-        fetch("http://localhost:8080/subjects", {
+        fetch("http://localhost:8080/professors", {
             mode: "cors",
             method: "GET",
             headers: {
@@ -31,11 +31,9 @@ class TeachersPage extends React.Component {
                     console.log(error);
                 }
             );
-        return "alo";
     }
 
     componentDidMount() {
-        console.log("Mounted");
         console.log(this.getTeachers());
     }
 
@@ -59,7 +57,7 @@ class TeachersPage extends React.Component {
                 </tr>
               </thead>
               <tbody>
-              {(this.state.data) ?  this.state.data.map((item, i) => <tr> <td> {i+1}</td> <td> {item.name}</td> <td> {item.semester}</td></tr>) : "there is no data"}
+              {(this.state.data) ?  this.state.data.map((item, i) => <tr> <td> {i+1}</td> <td> {item.name}</td> <td> {item.surname}</td></tr>) : ""}
 
               </tbody>
             </Table>

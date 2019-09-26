@@ -4,42 +4,55 @@ import Footer from "../components/Footer";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 import Breadcrumb from "react-bootstrap/Breadcrumb";
+
 class AddSubjectsPage extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { data: "No data" };
+    this.state = {name: ""};
+    this.state = {semester: ""};
+
+}
+
+  addSubject(event) {
+      event.preventDefault();
+
+      let params = {
+          name: this.state.name,
+          semester: this.state.semester
+      };
+
+      const searchParams = Object.keys(params).map((key) => {
+          return encodeURIComponent(key) + '=' + encodeURIComponent(params[key]);
+      }).join('&');
+
+      fetch("http://localhost:8080/subjects/add?" + searchParams, {
+          mode: "cors",
+          method: "POST",
+          headers: {
+              Accept: "application/json",
+              //"Content-Type": "application/json"
+              'Content-Type': 'application/x-www-form-urlencoded',
+          }
+      })
+          .then(res => res.text())
+          .then(
+              (result) => {
+                  console.log(result);
+
+              },
+              error => {
+                  console.log(error);
+              }
+          );
   }
-
-  getClassrooms() {
-    fetch("http://localhost:8080/classrooms", {
-      mode: "cors",
-
-      method: "GET",
-      headers: {
-        Accept: "application/json",
-        "Content-Type": "application/json"
-        // 'Content-Type': 'application/x-www-form-urlencoded',
-      }
-    })
-      .then(res => res.text())
-      .then(
-        result => {
-          console.log(result);
-          this.setState({ data: result });
-        },
-
-        error => {
-          console.log(error);
-        }
-      );
-    return "alo";
+  handleNameChange(event)
+  {
+     this.setState({name: event.target.value});
   }
-
-  componentDidMount() {
-    console.log("Mounted");
-    console.log(this.getClassrooms());
+  handleSemesterChange(event)
+  {
+    this.setState({semester: event.target.value});
   }
-
   render() {
     return (
       <div>
@@ -51,24 +64,18 @@ class AddSubjectsPage extends React.Component {
         </Breadcrumb>
         <div className="wrapper">
           <div className="loginWrapper">
-            <Form>
+            <Form onSubmit={this.addSubject.bind(this)}>
               <Form.Group controlId="formGroupIme">
                 <Form.Label>Име</Form.Label>
                 <Form.Control
                   type="text"
                   placeholder="Внеси име на предметот"
-                />
+                onChange={this.handleNameChange.bind(this)}/>
               </Form.Group>
-              <Form.Group controlId="formGroupSemester">
+              <Form.Group controlId="semester">
                 <Form.Label>Семестар</Form.Label>
-                <Form.Control as="select">
-                  <option>Летен</option>
-                  <option>Зимски</option>
-                </Form.Control>
-              </Form.Group>
-              <Form.Group controlId="formGroupSession">
-                <Form.Label>Сесија</Form.Label>
-                <Form.Control type="text" placeholder="Внеси ја сесијата" />
+                <Form.Control type="text" placeholder="Внеси го семестарот"
+                              onChange={this.handleSemesterChange.bind(this)}/>
               </Form.Group>
               <Form.Group>
                 <Button type="btn-primary">Додади</Button>

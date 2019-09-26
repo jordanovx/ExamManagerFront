@@ -33,11 +33,10 @@ class AddTimeTablePage extends React.Component {
           console.log(error);
         }
       );
-    return "alo";
+
   }
 
   componentDidMount() {
-    console.log("Mounted");
     console.log(this.getClassrooms());
   }
 

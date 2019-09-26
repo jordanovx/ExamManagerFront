@@ -11,7 +11,7 @@ class SubjectsPage extends React.Component {
     this.state = { data : false}
   }
 
-  getClassrooms() {
+  getSubjects() {
     fetch("http://localhost:8080/subjects", {
       mode: "cors",
       method: "GET",
@@ -31,12 +31,10 @@ class SubjectsPage extends React.Component {
           console.log(error);
         }
       );
-    return "alo";
   }
 
   componentDidMount() {
-    console.log("Mounted");
-    console.log(this.getClassrooms());
+    console.log(this.getSubjects());
   }
 
   render() {
@@ -56,7 +54,6 @@ class SubjectsPage extends React.Component {
                   <th></th>
                   <th>Име на предмет</th>
                   <th>Семестар</th>
-                  <th>Сесија</th>
                 </tr>
               </thead>
                 <tbody>
