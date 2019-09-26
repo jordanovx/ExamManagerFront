@@ -31,6 +31,12 @@
   color: white;
 }
 
+.content {
+  margin: 0 auto;
+  padding: 50px;
+  margin-top: 100px;
+}
+
 .App-link {
   color: #09d3ac;
 }
@@ -52,6 +58,15 @@
   font-weight: bold;
 }
 
+.kopce .btn {
+  width: 200px;
+  height: 150px;
+  color: white;
+}
+
+.kopce a {
+  color: red;
+}
 
 
 .wrapper {
