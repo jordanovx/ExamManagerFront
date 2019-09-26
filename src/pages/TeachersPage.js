@@ -5,7 +5,41 @@ import { Table } from "react-bootstrap";
 
 import Breadcrumb from "react-bootstrap/Breadcrumb";
 class TeachersPage extends React.Component {
-  render() {
+
+    constructor(props) {
+        super(props);
+        this.state = { data : false}
+    }
+
+    getTeachers() {
+        fetch("http://localhost:8080/subjects", {
+            mode: "cors",
+            method: "GET",
+            headers: {
+                Accept: "application/json",
+                "Content-Type": "application/json"
+                // 'Content-Type': 'application/x-www-form-urlencoded',
+            }
+        })
+            .then(res => res.json())
+            .then(
+                (result) => {
+                    console.log(result);
+                    this.setState({data : Object.values(result)});
+                },
+                error => {
+                    console.log(error);
+                }
+            );
+        return "alo";
+    }
+
+    componentDidMount() {
+        console.log("Mounted");
+        console.log(this.getTeachers());
+    }
+
+    render() {
     return (
       <div>
         <NavigationBar />
@@ -25,16 +59,8 @@ class TeachersPage extends React.Component {
                 </tr>
               </thead>
               <tbody>
-                <tr>
-                  <td>1</td>
-                  <td>Mark</td>
-                  <td>Otto</td>
-                </tr>
-                <tr>
-                  <td>2</td>
-                  <td>Jacob</td>
-                  <td>Thornton</td>
-                </tr>
+              {(this.state.data) ?  this.state.data.map((item, i) => <tr> <td> {i+1}</td> <td> {item.name}</td> <td> {item.semester}</td></tr>) : "there is no data"}
+
               </tbody>
             </Table>
           </div>

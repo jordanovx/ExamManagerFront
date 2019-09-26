@@ -8,13 +8,12 @@ import Breadcrumb from "react-bootstrap/Breadcrumb";
 class SubjectsPage extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { data: "No data" };
+    this.state = { data : false}
   }
 
   getClassrooms() {
-    fetch("http://localhost:8080/classrooms", {
+    fetch("http://localhost:8080/subjects", {
       mode: "cors",
-
       method: "GET",
       headers: {
         Accept: "application/json",
@@ -22,14 +21,13 @@ class SubjectsPage extends React.Component {
         // 'Content-Type': 'application/x-www-form-urlencoded',
       }
     })
-      .then(res => res.text())
-      .then(
-        result => {
-          console.log(result);
-          this.setState({ data: result });
-        },
-
-        error => {
+        .then(res => res.json())
+        .then(
+            (result) => {
+              console.log(result);
+                this.setState({data : Object.values(result)});
+            },
+            error => {
           console.log(error);
         }
       );
@@ -61,21 +59,11 @@ class SubjectsPage extends React.Component {
                   <th>Сесија</th>
                 </tr>
               </thead>
-              <tbody>
-                <tr>
-                  <td>1</td>
-                  <td>Mark</td>
-                  <td>Otto</td>
-                  <td>Јунска</td>
-                </tr>
-                <tr>
-                  <td>2</td>
-                  <td>Jacob</td>
-                  <td>Thornton</td>
-                </tr>
+                <tbody>
+                {(this.state.data) ?  this.state.data.map((item, i) => <tr> <td> {i+1}</td> <td> {item.name}</td> <td> {item.semester}</td></tr>) : "there is no data"}
               </tbody>
             </Table>
-            {this.state.data};
+
           </div>
         </div>
         <Footer />

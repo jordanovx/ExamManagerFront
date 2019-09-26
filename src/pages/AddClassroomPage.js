@@ -5,16 +5,29 @@ import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 import Breadcrumb from "react-bootstrap/Breadcrumb";
 class AddClassroomPage extends React.Component {
-  constructor(props) {
+
+  constructor(props)
+  {
     super(props);
-    this.state = { data: "No data" };
+    this.state = {name : ""}
+    this.state ={capacity: ""}
   }
+  addClassroom(event) {
 
-  getClassrooms() {
-    fetch("http://localhost:8080/classrooms", {
+      event.preventDefault();
+
+      let params = {
+          name: this.state.name,
+          capacity: this.state.capacity
+      };
+
+      const searchParams = Object.keys(params).map((key) => {
+          return encodeURIComponent(key) + '=' + encodeURIComponent(params[key]);
+      }).join('&');
+
+   fetch("http://localhost:8080/classrooms/add?" + searchParams, {
       mode: "cors",
-
-      method: "GET",
+      method: "POST",
       headers: {
         Accept: "application/json",
         "Content-Type": "application/json"
@@ -32,14 +45,16 @@ class AddClassroomPage extends React.Component {
           console.log(error);
         }
       );
-    return "alo";
   }
 
-  componentDidMount() {
-    console.log("Mounted");
-    console.log(this.getClassrooms());
+  handleNameChange(event)
+  {
+    this.setState({name : event.target.value});
   }
-
+  handleCapacityChange(event)
+  {
+    this.setState({capacity: event.target.value});
+  }
   render() {
     return (
       <div>
@@ -51,16 +66,16 @@ class AddClassroomPage extends React.Component {
         </Breadcrumb>
         <div className="wrapper">
           <div className="loginWrapper">
-            <Form>
-              <Form.Group controlId="formGroupEmail">
+            <Form onSubmit={this.addClassroom.bind(this)}>
+              <Form.Group controlId="name">
                 <Form.Label>Име</Form.Label>
                 <Form.Control
                   type="text"
                   placeholder="Внеси име на просторија"
-                />
-                <Form.Group controlId="formGroupPassword">
+                 onChange={this.handleNameChange.bind(this)}/>
+                <Form.Group controlId="capacity">
                   <Form.Label>Капацитет</Form.Label>
-                  <Form.Control type="text" placeholder="Внеси капацитет" />
+                  <Form.Control type="text" placeholder="Внеси капацитет" onChange={this.handleCapacityChange.bind(this)} />
                 </Form.Group>
               </Form.Group>
               <Form.Group>
