@@ -20,8 +20,7 @@ class TimeTableByHour extends React.Component {
                 <th>15:00</th>
                 <th>16:00</th>
                 <th>17:00</th>
-                <th>18:00</th>
-                <th>19:00</th>
+
               </tr>
             </thead>
             <tbody>
@@ -37,8 +36,7 @@ class TimeTableByHour extends React.Component {
                 <td>Електронска и Мобилна Трговија</td>
                 <td>Електронска и Мобилна Трговија</td>
                 <td>Електронска и Мобилна Трговија</td>
-                <td>Електронска и Мобилна Трговија</td>
-                <td>Електронска и Мобилна Трговија</td>
+
               </tr>
               <tr>
                 <td>2</td>
