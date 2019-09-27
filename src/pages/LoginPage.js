@@ -1,19 +1,16 @@
-import React from 'react';
-import NavigationBar from "../components/NavigationBar";
+import React from "react";
 import Footer from "../components/Footer";
 import Login from "../components/Login";
 
 class LoginPage extends React.Component {
-
-    render()
-    {
-        return(
-            <div>
-                <NavigationBar/>
-                    <Login/>
-                <Footer/>
-            </div>)
-    }
+  render() {
+    return (
+      <div>
+        <Login />
+        <Footer />
+      </div>
+    );
+  }
 }
 
 export default LoginPage;

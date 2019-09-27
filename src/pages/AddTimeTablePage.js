@@ -33,7 +33,6 @@ class AddTimeTablePage extends React.Component {
           console.log(error);
         }
       );
-
   }
 
   componentDidMount() {
@@ -59,11 +58,6 @@ class AddTimeTablePage extends React.Component {
                   <option>..2..</option>
                 </Form.Control>
               </Form.Group>
-              <Form.Group controlId="formGroupSemester">
-                <Form.Label>Семестар</Form.Label>
-                <Form.Control type="text" placeholder="избери семестар" />
-              </Form.Group>
-
               <Form.Group controlId="formGroupSemester">
                 <Form.Label>Семестар</Form.Label>
                 <Form.Control as="select">
