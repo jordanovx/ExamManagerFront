@@ -8,14 +8,20 @@ class AddSessionPage extends React.Component {
   constructor(props) {
     super(props);
     this.state = { name: "" };
-    this.state = { capacity: "" };
+    this.state = { session_start: ""};
+    this.state = { session_end: ""};
+    this.state = { total_hours: ""}
+    this.state = { professor_count: ""};
   }
-  addClassroom(event) {
+  addSession(event) {
     event.preventDefault();
 
     let params = {
-      name: this.state.name,
-      capacity: this.state.capacity
+      session: this.state.name,
+      start_date: this.state.session_start,
+      end_date: this.state.session_end,
+      total_teachers: this.state.professor_count,
+      total_hours: this.state.total_hours
     };
 
     const searchParams = Object.keys(params)
@@ -24,34 +30,47 @@ class AddSessionPage extends React.Component {
       })
       .join("&");
 
-    fetch("http://localhost:8080/classrooms/add?" + searchParams, {
+    fetch("http://localhost:8080/timetables/add?" + searchParams, {
       mode: "cors",
       method: "POST",
       headers: {
         Accept: "application/json",
-        "Content-Type": "application/json"
-        // 'Content-Type': 'application/x-www-form-urlencoded',
+        //"Content-Type": "application/json"
+         'Content-Type': 'application/x-www-form-urlencoded',
       }
     })
-      .then(res => res.text())
-      .then(
-        result => {
-          console.log(result);
-          this.setState({ data: result });
-        },
-
-        error => {
-          console.log(error);
-        }
-      );
+        .then(res => res.text())
+        .then(
+            (result) => {
+                console.log(result);
+            },
+            error => {
+                console.log(error);
+            }
+        );
   }
 
   handleNameChange(event) {
     this.setState({ name: event.target.value });
   }
-  handleCapacityChange(event) {
-    this.setState({ capacity: event.target.value });
+  handleSessionStartChange(event)
+  {
+        this.setState({ session_start: event.target.value });
   }
+  handleSessionEndChange(event)
+  {
+        this.setState({ session_end: event.target.value });
+  }
+  handleTotalHoursChange(event)
+  {
+        this.setState({total_hours: event.target.value});
+  }
+  handleProfessorCountChange(event)
+  {
+        this.setState({professor_count: event.target.value});
+  }
+
+
   render() {
     return (
       <div>
@@ -63,13 +82,13 @@ class AddSessionPage extends React.Component {
         </Breadcrumb>
         <div className="wrapper">
           <div className="loginWrapper">
-            <Form onSubmit={this.addClassroom.bind(this)}>
+            <Form onSubmit={this.addSession.bind(this)}>
               <Form.Group controlId="name">
                 <Form.Label>Име</Form.Label>
                 <Form.Control
                   type="text"
                   placeholder="Внеси име на сесија"
-                  onChange={this.handleCapacityChange.bind(this)}
+                  onChange={this.handleNameChange.bind(this)}
                 />
               </Form.Group>
               <Form.Group controlId="sessionStart">
@@ -77,14 +96,14 @@ class AddSessionPage extends React.Component {
                 <Form.Control
                   type="text"
                   placeholder="Внеси почеток на сесија"
-                  onChange={this.handleNameChange.bind(this)}
+                  onChange={this.handleSessionStartChange.bind(this)}
                 />
                 <Form.Group controlId="sessionEnd">
                   <Form.Label>Крај на сесија</Form.Label>
                   <Form.Control
                     type="text"
                     placeholder="Внеси крај на сесија"
-                    onChange={this.handleCapacityChange.bind(this)}
+                    onChange={this.handleSessionEndChange.bind(this)}
                   />
                 </Form.Group>
                 <Form.Group controlId="totalHours">
@@ -92,7 +111,7 @@ class AddSessionPage extends React.Component {
                   <Form.Control
                     type="text"
                     placeholder="Внеси вкупни часеви"
-                    onChange={this.handleCapacityChange.bind(this)}
+                    onChange={this.handleTotalHoursChange.bind(this)}
                   />
                 </Form.Group>
                 <Form.Group controlId="totalTeachers">
@@ -100,7 +119,7 @@ class AddSessionPage extends React.Component {
                   <Form.Control
                     type="text"
                     placeholder="Внеси број на професори"
-                    onChange={this.handleCapacityChange.bind(this)}
+                    onChange={this.handleProfessorCountChange.bind(this)}
                   />
                 </Form.Group>
               </Form.Group>

@@ -37,7 +37,9 @@ class AddSubjectsPage extends React.Component {
           .then(res => res.text())
           .then(
               (result) => {
+                  this.props.history.push('/subjects');
                   console.log(result);
+
 
               },
               error => {
@@ -53,6 +55,7 @@ class AddSubjectsPage extends React.Component {
   {
     this.setState({semester: event.target.value});
   }
+
   render() {
     return (
       <div>

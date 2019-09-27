@@ -38,7 +38,7 @@ class AddTeachersPage extends React.Component {
       .then(
           (result) => {
           console.log(result);
-          this.setState({ data: result });
+          this.props.history.push('/teachers');
         },
 
         error => {

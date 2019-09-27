@@ -10,8 +10,8 @@ class SessionPage extends React.Component {
     this.state = { data: false };
   }
 
-  getTeachers() {
-    fetch("http://localhost:8080/professors", {
+  getSessions() {
+    fetch("http://localhost:8080/timetables", {
       mode: "cors",
       method: "GET",
       headers: {
@@ -33,7 +33,7 @@ class SessionPage extends React.Component {
   }
 
   componentDidMount() {
-    console.log(this.getTeachers());
+    this.getSessions();
   }
 
   render() {
@@ -50,10 +50,11 @@ class SessionPage extends React.Component {
             <Table striped bordered hover>
               <thead>
                 <tr>
-                  <th>Име</th>
+                    <th> </th>
+                  <th>Сесија</th>
                   <th>Почеток</th>
                   <th>Крај</th>
-                  <th>Вкупно часеви</th>
+                  <th>Вкупно саати</th>
                   <th>Вкупно професори</th>
                 </tr>
               </thead>
@@ -61,9 +62,13 @@ class SessionPage extends React.Component {
                 {this.state.data
                   ? this.state.data.map((item, i) => (
                       <tr>
-                        {" "}
-                        <td> {i + 1}</td> <td> {item.name}</td>{" "}
-                        <td> {item.surname}</td>
+                        <td> {i + 1}</td>
+                          <td> {item.session} </td>
+                          <td> {item.start_date}</td>
+                        <td> {item.end_date}</td>
+                          <td> {item.total_hours}</td>
+                          <td> {item.total_teachers}</td>
+
                       </tr>
                     ))
                   : ""}

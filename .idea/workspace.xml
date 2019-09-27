@@ -2,7 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6b9428ce-ef5e-4a10-b96e-dc142e7e435a" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/pages/TimetablePage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/TimetablePage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/AddClassroomPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/AddClassroomPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/AddSessionPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/AddSessionPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/AddSubjectsPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/AddSubjectsPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/AddTeachersPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/AddTeachersPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/SessionPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/SessionPage.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -27,7 +32,7 @@
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="css" value="3" />
-          <entry key="js" value="45" />
+          <entry key="js" value="51" />
           <entry key="png" value="1" />
           <entry key="ts" value="1" />
         </counts>
@@ -36,7 +41,7 @@
         <counts>
           <entry key="CSS" value="3" />
           <entry key="Image" value="1" />
-          <entry key="JavaScript" value="45" />
+          <entry key="JavaScript" value="51" />
           <entry key="TypeScript" value="1" />
         </counts>
       </usages-collector>
@@ -49,24 +54,24 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="css" value="669" />
-          <entry key="js" value="6055" />
+          <entry key="js" value="7119" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="CSS" value="669" />
-          <entry key="JavaScript" value="6055" />
+          <entry key="JavaScript" value="7119" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/pages/TimetablePage.js">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/pages/AddSubjectsPage.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="42" column="3" lean-forward="true" selection-start-line="42" selection-start-column="3" selection-end-line="42" selection-end-column="3" />
+            <state relative-caret-position="-986">
+              <caret line="5" column="52" selection-start-line="5" selection-start-column="52" selection-end-line="5" selection-end-column="52" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -75,10 +80,34 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/pages/SubjectsPage.js">
+        <entry file="file://$PROJECT_DIR$/src/pages/AddTeachersPage.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="14" column="3" selection-start-line="14" selection-start-column="3" selection-end-line="32" selection-end-column="8" />
+            <state relative-caret-position="215">
+              <caret line="39" column="30" lean-forward="true" selection-start-line="38" selection-start-column="23" selection-end-line="39" selection-end-column="30" />
+              <folding>
+                <element signature="e#0#26#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/pages/AddClassroomPage.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="272">
+              <caret line="43" column="18" lean-forward="true" selection-start-line="43" selection-start-column="18" selection-end-line="43" selection-end-column="18" />
+              <folding>
+                <element signature="e#0#26#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/pages/SessionPage.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="181">
+              <caret line="53" column="28" selection-start-line="53" selection-start-column="28" selection-end-line="53" selection-end-column="28" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -113,14 +142,16 @@
         <option value="$PROJECT_DIR$/src/components/TimeTableByHour.js" />
         <option value="$PROJECT_DIR$/src/App.js" />
         <option value="$PROJECT_DIR$/src/components/NavigationBar.js" />
-        <option value="$PROJECT_DIR$/src/pages/AddClassroomPage.js" />
-        <option value="$PROJECT_DIR$/src/pages/AddSubjectsPage.js" />
         <option value="$PROJECT_DIR$/src/pages/TeachersPage.js" />
-        <option value="$PROJECT_DIR$/src/pages/AddTeachersPage.js" />
         <option value="$PROJECT_DIR$/src/pages/AddTimeTablePage.js" />
         <option value="$PROJECT_DIR$/src/pages/ClassroomsPage.js" />
         <option value="$PROJECT_DIR$/src/pages/SubjectsPage.js" />
         <option value="$PROJECT_DIR$/src/pages/TimetablePage.js" />
+        <option value="$PROJECT_DIR$/src/pages/AddSessionPage.js" />
+        <option value="$PROJECT_DIR$/src/pages/AddSubjectsPage.js" />
+        <option value="$PROJECT_DIR$/src/pages/AddTeachersPage.js" />
+        <option value="$PROJECT_DIR$/src/pages/AddClassroomPage.js" />
+        <option value="$PROJECT_DIR$/src/pages/SessionPage.js" />
       </list>
     </option>
   </component>
@@ -229,12 +260,12 @@
       <updated>1569340710668</updated>
       <workItem from="1569340712074" duration="14839000" />
       <workItem from="1569424449484" duration="2312000" />
-      <workItem from="1569510285426" duration="10224000" />
+      <workItem from="1569510285426" duration="13926000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="27375000" />
+    <option name="totallyTimeSpent" value="31077000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -407,16 +438,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/pages/AddTeachersPage.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-561">
-          <caret line="18" column="23" selection-start-line="18" selection-start-column="23" selection-end-line="18" selection-end-column="23" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/pages/AddTimeTablePage.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="383">
@@ -431,16 +452,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-255">
           <caret line="11" column="5" lean-forward="true" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/pages/AddClassroomPage.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="23" column="29" selection-start-line="23" selection-start-column="29" selection-end-line="23" selection-end-column="29" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -461,10 +472,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/pages/AddSubjectsPage.js">
+    <entry file="file://$PROJECT_DIR$/src/pages/TimetablePage.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1343">
-          <caret line="79" column="26" lean-forward="true" selection-start-line="79" selection-start-column="26" selection-end-line="79" selection-end-column="26" />
+        <state relative-caret-position="136">
+          <caret line="29" column="24" lean-forward="true" selection-start-line="29" selection-start-column="24" selection-end-line="29" selection-end-column="24" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pages/AddSessionPage.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="103">
+          <caret line="51" lean-forward="true" selection-start-line="51" selection-end-line="51" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
@@ -473,18 +494,48 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/pages/SubjectsPage.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="14" column="3" selection-start-line="14" selection-start-column="3" selection-end-line="32" selection-end-column="8" />
+        <state relative-caret-position="187">
+          <caret line="32" column="8" lean-forward="true" selection-start-line="23" selection-start-column="8" selection-end-line="32" selection-end-column="8" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/pages/TimetablePage.js">
+    <entry file="file://$PROJECT_DIR$/src/pages/AddSubjectsPage.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="42" column="3" lean-forward="true" selection-start-line="42" selection-start-column="3" selection-end-line="42" selection-end-column="3" />
+        <state relative-caret-position="-986">
+          <caret line="5" column="52" selection-start-line="5" selection-start-column="52" selection-end-line="5" selection-end-column="52" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pages/AddTeachersPage.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="215">
+          <caret line="39" column="30" lean-forward="true" selection-start-line="38" selection-start-column="23" selection-end-line="39" selection-end-column="30" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pages/AddClassroomPage.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="43" column="18" lean-forward="true" selection-start-line="43" selection-start-column="18" selection-end-line="43" selection-end-column="18" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pages/SessionPage.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="181">
+          <caret line="53" column="28" selection-start-line="53" selection-start-column="28" selection-end-line="53" selection-end-column="28" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
