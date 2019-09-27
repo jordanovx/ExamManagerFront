@@ -56,13 +56,13 @@ class TimetablePage extends React.Component {
               </Form.Control>
             </Form.Group>
             <Form.Group controlId="formGridState" className="timetable-select">
-              <Form.Label>Сесија по</Form.Label>
+              <Form.Label>Одбери сесија</Form.Label>
               <Form.Control
                 as="select"
                 onChange={this.selectChangeEvent.bind(this)}
               >
-                <option value="eden">еден</option>
-                <option value="dva">два</option>
+                <option value="eden">Јунска 2018/2019</option>
+                <option value="dva">Септемвриска 2018/2019</option>
               </Form.Control>
             </Form.Group>
             {this.state.selected === "hour" ? (

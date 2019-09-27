@@ -2,9 +2,10 @@ import React from "react";
 import NavigationBar from "../components/NavigationBar";
 import Footer from "../components/Footer";
 import { Table } from "react-bootstrap";
-
 import Breadcrumb from "react-bootstrap/Breadcrumb";
+
 class SessionPage extends React.Component {
+
   constructor(props) {
     super(props);
     this.state = { data: false };
@@ -65,10 +66,9 @@ class SessionPage extends React.Component {
                         <td> {i + 1}</td>
                           <td> {item.session} </td>
                           <td> {item.start_date}</td>
-                        <td> {item.end_date}</td>
+                          <td> {item.end_date}</td>
                           <td> {item.total_hours}</td>
                           <td> {item.total_teachers}</td>
-
                       </tr>
                     ))
                   : ""}
