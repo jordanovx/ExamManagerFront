@@ -43,7 +43,7 @@ class TimetablePage extends React.Component {
     return (
       <div>
         <NavigationBar />
-        <div className="wrapper">
+        <div className="wrapper1">
           <div className="classroomsTable">
             <Form.Group controlId="formGridState" className="timetable-select">
               <Form.Label>Прикажи по</Form.Label>
@@ -55,11 +55,6 @@ class TimetablePage extends React.Component {
                 <option value="date">Датум</option>
               </Form.Control>
             </Form.Group>
-            {this.state.selected === "hour" ? (
-              <TimeTableByHour />
-            ) : (
-              <TimeTableByDate />
-            )}
             <Form.Group controlId="formGridState" className="timetable-select">
               <Form.Label>Сесија по</Form.Label>
               <Form.Control
@@ -70,6 +65,11 @@ class TimetablePage extends React.Component {
                 <option value="dva">два</option>
               </Form.Control>
             </Form.Group>
+            {this.state.selected === "hour" ? (
+              <TimeTableByHour />
+            ) : (
+              <TimeTableByDate />
+            )}
           </div>
         </div>
 
