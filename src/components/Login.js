@@ -19,13 +19,25 @@ class Login extends React.Component {
             <Form.Group>
               <Form.Check type="checkbox" label="Запомни ме?" />
             </Form.Group>
-            <Form.Group className="RegForm">
-              <Button variant="outline-primary" type="btn-primary">
-                Најави се
-              </Button>
-              <Button type="btn-secondary" href="/signup">
-                Регистрирај се!
-              </Button>
+            <Form.Group className="row">
+              <div className="col-6">
+                <Button
+                  className="btn btn-block"
+                  variant="outline-primary"
+                  type="btn-primary"
+                >
+                  Најави се
+                </Button>
+              </div>
+              <div className="col-6">
+                <Button
+                  className="btn btn-block"
+                  type="btn-secondary"
+                  href="/signup"
+                >
+                  Регистрирај се!
+                </Button>
+              </div>
             </Form.Group>
           </Form>
         </div>

@@ -1,31 +1,28 @@
 import React from "react";
-import NavigationBar from "../components/NavigationBar";
-import Footer from "../components/Footer";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 import Breadcrumb from "react-bootstrap/Breadcrumb";
 class AddClassroomPage extends React.Component {
-
-  constructor(props)
-  {
+  constructor(props) {
     super(props);
-    this.state = {name : ""}
-    this.state ={capacity: ""}
+    this.state = { name: "" };
+    this.state = { capacity: "" };
   }
   addClassroom(event) {
+    event.preventDefault();
 
-      event.preventDefault();
+    let params = {
+      name: this.state.name,
+      capacity: this.state.capacity
+    };
 
-      let params = {
-          name: this.state.name,
-          capacity: this.state.capacity
-      };
+    const searchParams = Object.keys(params)
+      .map(key => {
+        return encodeURIComponent(key) + "=" + encodeURIComponent(params[key]);
+      })
+      .join("&");
 
-      const searchParams = Object.keys(params).map((key) => {
-          return encodeURIComponent(key) + '=' + encodeURIComponent(params[key]);
-      }).join('&');
-
-   fetch("http://localhost:8080/classrooms/add?" + searchParams, {
+    fetch("http://localhost:8080/classrooms/add?" + searchParams, {
       mode: "cors",
       method: "POST",
       headers: {
@@ -38,7 +35,7 @@ class AddClassroomPage extends React.Component {
       .then(
         result => {
           console.log(result);
-            this.props.history.push('/classrooms');
+          this.props.history.push("/classrooms");
         },
 
         error => {
@@ -47,18 +44,15 @@ class AddClassroomPage extends React.Component {
       );
   }
 
-  handleNameChange(event)
-  {
-    this.setState({name : event.target.value});
+  handleNameChange(event) {
+    this.setState({ name: event.target.value });
   }
-  handleCapacityChange(event)
-  {
-    this.setState({capacity: event.target.value});
+  handleCapacityChange(event) {
+    this.setState({ capacity: event.target.value });
   }
   render() {
     return (
       <div>
-        <NavigationBar />
         <Breadcrumb className="troski">
           <Breadcrumb.Item href="/">Почетна</Breadcrumb.Item>
           <Breadcrumb.Item href="/addclassroom">Просторија</Breadcrumb.Item>
@@ -72,10 +66,15 @@ class AddClassroomPage extends React.Component {
                 <Form.Control
                   type="text"
                   placeholder="Внеси име на просторија"
-                 onChange={this.handleNameChange.bind(this)}/>
+                  onChange={this.handleNameChange.bind(this)}
+                />
                 <Form.Group controlId="capacity">
                   <Form.Label>Капацитет</Form.Label>
-                  <Form.Control type="text" placeholder="Внеси капацитет" onChange={this.handleCapacityChange.bind(this)} />
+                  <Form.Control
+                    type="text"
+                    placeholder="Внеси капацитет"
+                    onChange={this.handleCapacityChange.bind(this)}
+                  />
                 </Form.Group>
               </Form.Group>
               <Form.Group>
@@ -84,7 +83,6 @@ class AddClassroomPage extends React.Component {
             </Form>
           </div>
         </div>
-        <Footer />
       </div>
     );
   }

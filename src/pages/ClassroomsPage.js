@@ -1,6 +1,4 @@
 import React from "react";
-import NavigationBar from "../components/NavigationBar";
-import Footer from "../components/Footer";
 
 import { Table } from "react-bootstrap";
 import Breadcrumb from "react-bootstrap/Breadcrumb";
@@ -12,25 +10,25 @@ class ClassroomsPage extends React.Component {
   }
 
   getClassrooms() {
-      fetch("http://localhost:8080/classrooms", {
-          mode: "cors",
-          method: "GET",
-          headers: {
-              Accept: "application/json",
-              "Content-Type": "application/json"
-              // 'Content-Type': 'application/x-www-form-urlencoded',
-          }
-      })
-          .then(res => res.json())
-          .then(
-              (result) => {
-                  console.log(result);
-                  this.setState({data : Object.values(result)});
-              },
-              error => {
-                  console.log(error);
-              }
-          );
+    fetch("http://localhost:8080/classrooms", {
+      mode: "cors",
+      method: "GET",
+      headers: {
+        Accept: "application/json",
+        "Content-Type": "application/json"
+        // 'Content-Type': 'application/x-www-form-urlencoded',
+      }
+    })
+      .then(res => res.json())
+      .then(
+        result => {
+          console.log(result);
+          this.setState({ data: Object.values(result) });
+        },
+        error => {
+          console.log(error);
+        }
+      );
   }
 
   componentDidMount() {
@@ -40,7 +38,6 @@ class ClassroomsPage extends React.Component {
   render() {
     return (
       <div>
-        <NavigationBar />
         <Breadcrumb className="troski">
           <Breadcrumb.Item href="/">Почетна</Breadcrumb.Item>
           <Breadcrumb.Item href="/classrooms">Простории</Breadcrumb.Item>
@@ -57,12 +54,19 @@ class ClassroomsPage extends React.Component {
                 </tr>
               </thead>
               <tbody>
-              {(this.state.data) ?  this.state.data.map((item, i) => <tr> <td> {i+1}</td> <td> {item.name}</td> <td> {item.capacity}</td></tr>) : "there is no data"}
+                {this.state.data
+                  ? this.state.data.map((item, i) => (
+                      <tr>
+                        {" "}
+                        <td> {i + 1}</td> <td> {item.name}</td>{" "}
+                        <td> {item.capacity}</td>
+                      </tr>
+                    ))
+                  : "there is no data"}
               </tbody>
             </Table>
           </div>
         </div>
-        <Footer />
       </div>
     );
   }

@@ -6,7 +6,7 @@ class TimeTableByDate extends React.Component {
     return (
       <div>
         <div className="wrapper">
-          <Table striped bordered hover>
+          <Table striped bordered hover responsive="lg">
             <thead>
               <tr>
                 <th></th>
@@ -14,8 +14,7 @@ class TimeTableByDate extends React.Component {
                 <th></th>
               </tr>
             </thead>
-            <tbody>
-            </tbody>
+            <tbody></tbody>
           </Table>
         </div>
       </div>

@@ -1,5 +1,4 @@
 import React from "react";
-import Footer from "../components/Footer";
 import Login from "../components/Login";
 
 class LoginPage extends React.Component {
@@ -7,7 +6,6 @@ class LoginPage extends React.Component {
     return (
       <div>
         <Login />
-        <Footer />
       </div>
     );
   }

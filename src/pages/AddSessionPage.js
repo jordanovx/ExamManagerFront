@@ -1,6 +1,4 @@
 import React from "react";
-import NavigationBar from "../components/NavigationBar";
-import Footer from "../components/Footer";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 import Breadcrumb from "react-bootstrap/Breadcrumb";
@@ -8,10 +6,10 @@ class AddSessionPage extends React.Component {
   constructor(props) {
     super(props);
     this.state = { name: "" };
-    this.state = { session_start: ""};
-    this.state = { session_end: ""};
-    this.state = { total_hours: ""}
-    this.state = { professor_count: ""};
+    this.state = { session_start: "" };
+    this.state = { session_end: "" };
+    this.state = { total_hours: "" };
+    this.state = { professor_count: "" };
   }
   addSession(event) {
     event.preventDefault();
@@ -36,45 +34,39 @@ class AddSessionPage extends React.Component {
       headers: {
         Accept: "application/json",
         //"Content-Type": "application/json"
-         'Content-Type': 'application/x-www-form-urlencoded',
+        "Content-Type": "application/x-www-form-urlencoded"
       }
     })
-        .then(res => res.text())
-        .then(
-            (result) => {
-                console.log(result);
-            },
-            error => {
-                console.log(error);
-            }
-        );
+      .then(res => res.text())
+      .then(
+        result => {
+          console.log(result);
+        },
+        error => {
+          console.log(error);
+        }
+      );
   }
 
   handleNameChange(event) {
     this.setState({ name: event.target.value });
   }
-  handleSessionStartChange(event)
-  {
-        this.setState({ session_start: event.target.value });
+  handleSessionStartChange(event) {
+    this.setState({ session_start: event.target.value });
   }
-  handleSessionEndChange(event)
-  {
-        this.setState({ session_end: event.target.value });
+  handleSessionEndChange(event) {
+    this.setState({ session_end: event.target.value });
   }
-  handleTotalHoursChange(event)
-  {
-        this.setState({total_hours: event.target.value});
+  handleTotalHoursChange(event) {
+    this.setState({ total_hours: event.target.value });
   }
-  handleProfessorCountChange(event)
-  {
-        this.setState({professor_count: event.target.value});
+  handleProfessorCountChange(event) {
+    this.setState({ professor_count: event.target.value });
   }
-
 
   render() {
     return (
       <div>
-        <NavigationBar />
         <Breadcrumb className="troski">
           <Breadcrumb.Item href="/">Почетна</Breadcrumb.Item>
           <Breadcrumb.Item href="/session">Сесии</Breadcrumb.Item>
@@ -129,7 +121,6 @@ class AddSessionPage extends React.Component {
             </Form>
           </div>
         </div>
-        <Footer />
       </div>
     );
   }

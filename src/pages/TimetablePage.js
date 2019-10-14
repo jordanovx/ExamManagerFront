@@ -1,9 +1,10 @@
 import React from "react";
-import NavigationBar from "../components/NavigationBar";
-import Footer from "../components/Footer";
 import { Form } from "react-bootstrap";
 import TimeTableByHour from "../components/TimeTableByHour";
 import TimeTableByDate from "../components/TimeTableByDate";
+
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
 
 class TimetablePage extends React.Component {
   constructor(props) {
@@ -42,38 +43,45 @@ class TimetablePage extends React.Component {
   render() {
     return (
       <div>
-        <NavigationBar />
-        <div className="wrapper1">
-          <div className="classroomsTable">
-            <Form.Group controlId="formGridState" className="timetable-select">
-              <Form.Label>Прикажи по</Form.Label>
-              <Form.Control
-                as="select"
-                onChange={this.selectChangeEvent.bind(this)}
-              >
-                <option value="hour">Час</option>
-                <option value="date">Датум</option>
-              </Form.Control>
-            </Form.Group>
-            <Form.Group controlId="formGridState" className="timetable-select">
-              <Form.Label>Одбери сесија</Form.Label>
-              <Form.Control
-                as="select"
-                onChange={this.selectChangeEvent.bind(this)}
-              >
-                <option value="eden">Јунска 2018/2019</option>
-                <option value="dva">Септемвриска 2018/2019</option>
-              </Form.Control>
-            </Form.Group>
-            {this.state.selected === "hour" ? (
-              <TimeTableByHour />
-            ) : (
-              <TimeTableByDate />
-            )}
-          </div>
-        </div>
-
-        <Footer />
+        <Row className="justify-content-md-center">
+          <Col xs lg="2">
+            <div className="wrapper1">
+              <div className="classroomsTable">
+                <Form.Group
+                  controlId="formGridState"
+                  className="timetable-select"
+                >
+                  <Form.Label>Прикажи по</Form.Label>
+                  <Form.Control
+                    as="select"
+                    onChange={this.selectChangeEvent.bind(this)}
+                  >
+                    <option value="hour">Час</option>
+                    <option value="date">Датум</option>
+                  </Form.Control>
+                </Form.Group>
+                <Form.Group
+                  controlId="formGridState"
+                  className="timetable-select"
+                >
+                  <Form.Label>Одбери сесија</Form.Label>
+                  <Form.Control
+                    as="select"
+                    onChange={this.selectChangeEvent.bind(this)}
+                  >
+                    <option value="eden">Јунска 2018/2019</option>
+                    <option value="dva">Септемвриска 2018/2019</option>
+                  </Form.Control>
+                </Form.Group>
+                {this.state.selected === "hour" ? (
+                  <TimeTableByHour />
+                ) : (
+                  <TimeTableByDate />
+                )}
+              </div>
+            </div>
+          </Col>
+        </Row>
       </div>
     );
   }

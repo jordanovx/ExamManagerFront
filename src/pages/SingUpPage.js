@@ -1,5 +1,4 @@
 import React from "react";
-import Footer from "../components/Footer";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 
@@ -27,11 +26,12 @@ class SignUpPage extends React.Component {
               <Form.Control type="password" placeholder="Потврди лозинка" />
             </Form.Group>
             <Form.Group>
-              <Button type="btn-primary">Регистрација</Button>
+              <Button type="btn-primary" className="btn btn-block btnLogin">
+                Регистрација
+              </Button>
             </Form.Group>
           </Form>
         </div>
-        <Footer />
       </div>
     );
   }

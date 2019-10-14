@@ -1,6 +1,4 @@
 import React from "react";
-import NavigationBar from "../components/NavigationBar";
-import Footer from "../components/Footer";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 
@@ -42,7 +40,6 @@ class AddTimeTablePage extends React.Component {
   render() {
     return (
       <div>
-        <NavigationBar />
         <Breadcrumb className="troski">
           <Breadcrumb.Item href="/">Почетна</Breadcrumb.Item>
           <Breadcrumb.Item href="/addtimetable">Распоред</Breadcrumb.Item>
@@ -96,7 +93,6 @@ class AddTimeTablePage extends React.Component {
             </Form>
           </div>
         </div>
-        <Footer />
       </div>
     );
   }

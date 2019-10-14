@@ -17,10 +17,13 @@ import AddSubjectsPage from "./pages/AddSubjectsPage";
 import SubjectsPage from "./pages/SubjectsPage";
 import SessionPage from "./pages/SessionPage";
 import AddSessionPage from "./pages/AddSessionPage";
+import NavigationBar from "./components/NavigationBar";
+import Footer from "./components/Footer";
 function App() {
   return (
     <div className="App">
       <Header />
+      <NavigationBar />
       <BrowserRouter>
         <Route path="/" exact component={HomePage} />
         <Route path="/login" component={LoginPage} />
@@ -37,6 +40,7 @@ function App() {
 
         <Route path="/addsession" component={AddSessionPage} />
       </BrowserRouter>
+      <Footer />
     </div>
   );
 }

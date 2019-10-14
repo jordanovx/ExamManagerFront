@@ -1,6 +1,4 @@
 import React from "react";
-import NavigationBar from "../components/NavigationBar";
-import Footer from "../components/Footer";
 import { Table } from "react-bootstrap";
 
 import Breadcrumb from "react-bootstrap/Breadcrumb";

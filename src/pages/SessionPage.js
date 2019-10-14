@@ -1,11 +1,8 @@
 import React from "react";
-import NavigationBar from "../components/NavigationBar";
-import Footer from "../components/Footer";
 import { Table } from "react-bootstrap";
 import Breadcrumb from "react-bootstrap/Breadcrumb";
 
 class SessionPage extends React.Component {
-
   constructor(props) {
     super(props);
     this.state = { data: false };
@@ -40,7 +37,6 @@ class SessionPage extends React.Component {
   render() {
     return (
       <div>
-        <NavigationBar />
         <Breadcrumb className="troski">
           <Breadcrumb.Item href="/">Почетна</Breadcrumb.Item>
           <Breadcrumb.Item href="/session">Сесии</Breadcrumb.Item>
@@ -51,7 +47,7 @@ class SessionPage extends React.Component {
             <Table striped bordered hover>
               <thead>
                 <tr>
-                    <th> </th>
+                  <th> </th>
                   <th>Сесија</th>
                   <th>Почеток</th>
                   <th>Крај</th>
@@ -64,11 +60,11 @@ class SessionPage extends React.Component {
                   ? this.state.data.map((item, i) => (
                       <tr>
                         <td> {i + 1}</td>
-                          <td> {item.session} </td>
-                          <td> {item.start_date}</td>
-                          <td> {item.end_date}</td>
-                          <td> {item.total_hours}</td>
-                          <td> {item.total_teachers}</td>
+                        <td> {item.session} </td>
+                        <td> {item.start_date}</td>
+                        <td> {item.end_date}</td>
+                        <td> {item.total_hours}</td>
+                        <td> {item.total_teachers}</td>
                       </tr>
                     ))
                   : ""}
@@ -76,7 +72,6 @@ class SessionPage extends React.Component {
             </Table>
           </div>
         </div>
-        <Footer />
       </div>
     );
   }
