@@ -1,15 +1,9 @@
-import React from 'react';
+import React from "react";
 
 class Header extends React.Component {
-
-    render()
-    {
-        return(<div>
-            <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
-
-        </div>)
-    }
-
+  render() {
+    return <div></div>;
+  }
 }
 
 export default Header;

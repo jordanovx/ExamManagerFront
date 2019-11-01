@@ -1,6 +1,8 @@
 import React from "react";
 import { BrowserRouter, Route } from "react-router-dom";
 import "./App.css";
+import "./SideBar.css";
+import SideBar from "./components/SideBar";
 
 // Pages imports
 import HomePage from "./pages/HomePage";
@@ -19,11 +21,15 @@ import SessionPage from "./pages/SessionPage";
 import AddSessionPage from "./pages/AddSessionPage";
 import NavigationBar from "./components/NavigationBar";
 import Footer from "./components/Footer";
+
 function App() {
   return (
     <div className="App">
       <Header />
-      <NavigationBar />
+
+      <NavigationBar className="nav"></NavigationBar>
+      <SideBar className="sideBar"></SideBar>
+
       <BrowserRouter>
         <Route path="/" exact component={HomePage} />
         <Route path="/login" component={LoginPage} />

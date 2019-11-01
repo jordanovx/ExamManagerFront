@@ -1,75 +1,70 @@
-/* @media (min-width: 1400px) {
-  div .kopce .btn {
-    width: 306px;
+@media only screen and (max-width: 600px) {
+
+  div .btn-wrapper {
+    display: inline-grid;
+  }
+
+  .btn-wrapper button {
+    width: 460px;
+  }
+
+  div .btn .btnStyle {
+    background-color: rgb(10, 10, 8);
+  }
+
+  .nav {
+    display: none;
+  }
+
+}
+
+@media (min-width: 600px) and (max-width: 768px) {
+  .btnStyle {
+    padding: 2px;
+  }
+
+  .sideBar,
+  .bm-burger-button {
+    display: none;
+  }
+
+  .nav {
+    display: block;
+  }
+}
+
+/* ##Device = Tablets, Ipads (portrait)
+##Screen = B/w 768px to 1024px */
+@media (min-width: 768px) and (max-width: 1024px) {
+
+  .sideBar,
+  .bm-burger-button {
+    display: none;
+  }
+
+
+  .nav {
+    display: block;
   }
 }
 
 
-@media (min-width: 1280px) {
+@media (min-width: 1024px) {
   div .kopce .btn {
     width: 206px;
   }
-}
 
-
-/*
-  ##Device = Laptops, Desktops
-  ##Screen = B/w 1025px to 1280px
-*/
-
-/* @media (min-width: 1025px) and (max-width: 1280px) {
-
-
-  div .kopce .btn {
-    width: 168px;
-
+  .sideBar,
+  .bm-burger-button {
+    display: none;
   }
 
-} */
-
-/*
-  ##Device = Tablets, Ipads (portrait)
-  ##Screen = B/w 768px to 1024px
-*/
-
-/* @media (min-width: 768px) and (max-width: 1024px) {
-  div .kopce .btn {
-    width: 308px;
+  .nav {
+    display: block;
   }
 }
 
-*/
-
-/*
-  ##Device = Most of the Smartphones Mobiles (Portrait)
-  ##Screen = B/w 320px to 479px
-*/
-/*
-@media (min-width: 360px) and (max-width: 480px) {
-  .App {
-    width: 500px;
-  }
-
-  div .wrapper {
-
-    margin: 0 auto;
-
-  }
-
-
-  .content {
-    width: 300px;
-    padding: 5px;
-  }
-
-  .kopce .btn {
-    width: 80px;
-    height: 20%;
-
-  }
-
-} */
-*/ .App {
+.App {
   text-align: center;
 
 }
@@ -120,21 +115,20 @@
 .footer {
   width: 100%;
   background-image: linear-gradient(to top, #e6e9f0 0%, #eef1f5 100%);
-  min-height: 30px;
+  padding: 5px 0;
   text-decoration: none;
   position: absolute;
   bottom: 0;
+}
+
+.sideBar {
+  margin-top: -49px;
 }
 
 .footer a {
   color: rgb(54, 54, 54);
 }
 
-.footer .futer {
-  margin: 0 auto;
-  text-align: center;
-  padding: 15px 0px;
-}
 
 .footer a:hover {
   color: inherit;
@@ -212,6 +206,8 @@
 
 .timetable-select {
   width: 190px;
+}
 
-
+.hide {
+  display: none;
 }
