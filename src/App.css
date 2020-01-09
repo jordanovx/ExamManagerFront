@@ -1,0 +1,213 @@
+@media only screen and (max-width: 600px) {
+
+  div .btn-wrapper {
+    display: inline-grid;
+  }
+
+  .btn-wrapper button {
+    width: 460px;
+  }
+
+  div .btn .btnStyle {
+    background-color: rgb(10, 10, 8);
+  }
+
+  .nav {
+    display: none;
+  }
+
+}
+
+@media (min-width: 600px) and (max-width: 768px) {
+  .btnStyle {
+    padding: 2px;
+  }
+
+  .sideBar,
+  .bm-burger-button {
+    display: none;
+  }
+
+  .nav {
+    display: block;
+  }
+}
+
+/* ##Device = Tablets, Ipads (portrait)
+##Screen = B/w 768px to 1024px */
+@media (min-width: 768px) and (max-width: 1024px) {
+
+  .sideBar,
+  .bm-burger-button {
+    display: none;
+  }
+
+
+  .nav {
+    display: block;
+  }
+}
+
+
+@media (min-width: 1024px) {
+  div .kopce .btn {
+    width: 206px;
+  }
+
+  .sideBar,
+  .bm-burger-button {
+    display: none;
+  }
+
+  .nav {
+    display: block;
+  }
+}
+
+.App {
+  text-align: center;
+
+}
+
+
+.App-logo {
+  height: 40vmin;
+}
+
+.troski ol {
+  background-color: inherit;
+  border: 0.5px solid #dee2e6;
+}
+
+/* .RegForm {
+  min-height: 100px;
+  width: 100%;
+  background-color: red;
+} */
+
+.btnLogin {
+  height: 50px !important;
+  margin-top: 25px;
+}
+
+/* .RegForm .btn {
+  height: 50px;
+  width: 40%;
+  margin: 10px;
+  padding-right: 25px;
+} */
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #09d3ac;
+}
+
+.footer {
+  width: 100%;
+  background-image: linear-gradient(to top, #e6e9f0 0%, #eef1f5 100%);
+  padding: 5px 0;
+  text-decoration: none;
+  position: absolute;
+  bottom: 0;
+}
+
+.sideBar {
+  margin-top: -49px;
+}
+
+.footer a {
+  color: rgb(54, 54, 54);
+}
+
+
+.footer a:hover {
+  color: inherit;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* .btnHome {
+  height: 170px;
+  color: white;
+  width: 100%;
+} */
+
+.btn-wrapper {
+  justify-content: center;
+  margin-bottom: 1rem;
+  display: flex;
+}
+
+.btn-wrapper a:hover {
+  text-decoration: none;
+}
+
+.btn-wrapper button {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.btnStyle {
+  width: 20%;
+
+}
+
+
+/* .wrapper {
+  min-height: 500px;
+  color: #ccc;
+  width: 100%;
+  margin: 0 auto;
+
+} */
+
+.loginWrapper {
+  width: 400px;
+  border: 1px solid #ccc;
+  border-radius: 15px 15px 15px 15px;
+  padding: 20px;
+  margin: 30px auto 30px;
+  text-align: left;
+  background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
+
+}
+
+.classroomsTable {
+  width: 100%;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.classroomsTable .timetable-select {
+  display: inline-block;
+  margin-right: 550px;
+}
+
+
+
+.classroomWrapper {
+  width: 400px;
+  border: 1px solid #ccc;
+  border-radius: 0px 4px 0px 4px;
+  padding: 20px;
+  margin: 30px auto 30px;
+
+}
+
+.timetable-select {
+  width: 190px;
+}
+
+.hide {
+  display: none;
+}
