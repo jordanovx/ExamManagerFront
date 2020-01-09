@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { Button } from "react-bootstrap";
+import { Button, Container, Row, Col } from "react-bootstrap";
 import {
   FaUserTie,
   FaRegCalendarPlus,
@@ -17,6 +17,9 @@ import {
 class ButtonHome extends React.Component {
   render() {
     return (
+        <Container>
+        <Row>
+          <Col xs={10}>
       <div>
         <div className="container mt-5">
           <div className="btn-wrapper ">
@@ -130,6 +133,9 @@ class ButtonHome extends React.Component {
           </div>
         </div>
       </div>
+          </Col>
+        </Row>
+        </Container>
     );
   }
 }

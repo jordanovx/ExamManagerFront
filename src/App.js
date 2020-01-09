@@ -2,7 +2,6 @@ import React from "react";
 import { BrowserRouter, Route } from "react-router-dom";
 import "./App.css";
 import "./SideBar.css";
-import SideBar from "./components/SideBar";
 
 // Pages imports
 import HomePage from "./pages/HomePage";
@@ -28,7 +27,6 @@ function App() {
       <Header />
 
       <NavigationBar className="nav"></NavigationBar>
-      <SideBar className="sideBar"></SideBar>
 
       <BrowserRouter>
         <Route path="/" exact component={HomePage} />

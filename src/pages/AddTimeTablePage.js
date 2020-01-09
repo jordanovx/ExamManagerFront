@@ -7,6 +7,7 @@ class AddTimeTablePage extends React.Component {
   constructor(props) {
     super(props);
     this.state = { data: "No data" };
+    this.state = {selected_date : ""};
   }
 
   getClassrooms() {
@@ -36,8 +37,12 @@ class AddTimeTablePage extends React.Component {
   componentDidMount() {
     console.log(this.getClassrooms());
   }
-
+  setStartDate(date)
+  {
+      this.setState({selected_date: date});
+  }
   render() {
+    const startDate = new Date();
     return (
       <div>
         <Breadcrumb className="troski">
@@ -66,7 +71,6 @@ class AddTimeTablePage extends React.Component {
 
               <Form.Group controlId="formGroupDate">
                 <Form.Label>Дата</Form.Label>
-                <Form.Control type="text" placeholder="избери датум" />
               </Form.Group>
               <Form.Group controlId="formGroupStartExam">
                 <Form.Label>Почеток на испит</Form.Label>

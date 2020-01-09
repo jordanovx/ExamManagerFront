@@ -11,7 +11,9 @@
   div .btn .btnStyle {
     background-color: rgb(10, 10, 8);
   }
-
+.btnStyle {
+  width: 70%;
+}
   .nav {
     display: none;
   }
@@ -117,7 +119,9 @@
   background-image: linear-gradient(to top, #e6e9f0 0%, #eef1f5 100%);
   padding: 5px 0;
   text-decoration: none;
-  position: absolute;
+  height: 10rem;
+  position: relative;
+  margin-top: 20rem;
   bottom: 0;
 }
 
@@ -163,13 +167,12 @@
 }
 
 
-/* .wrapper {
-  min-height: 500px;
-  color: #ccc;
+ .wrapper {
+  min-height: 650px;
   width: 100%;
   margin: 0 auto;
 
-} */
+}
 
 .loginWrapper {
   width: 400px;
