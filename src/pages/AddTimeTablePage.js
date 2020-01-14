@@ -7,7 +7,7 @@ class AddTimeTablePage extends React.Component {
   constructor(props) {
     super(props);
     this.state = { data: "No data" };
-    this.state = {selected_date : ""};
+    this.state = { selected_date: "" };
   }
 
   getClassrooms() {
@@ -37,9 +37,8 @@ class AddTimeTablePage extends React.Component {
   componentDidMount() {
     console.log(this.getClassrooms());
   }
-  setStartDate(date)
-  {
-      this.setState({selected_date: date});
+  setStartDate(date) {
+    this.setState({ selected_date: date });
   }
   render() {
     const startDate = new Date();

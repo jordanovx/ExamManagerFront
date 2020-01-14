@@ -2,16 +2,16 @@ import React from "react";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 import Breadcrumb from "react-bootstrap/Breadcrumb";
-import DatePicker from "react-datepicker";
-import "react-datepicker/dist/react-datepicker.css";
-import "react-datepicker/dist/react-datepicker-cssmodules.css";
+import DayPickerInput from "react-day-picker/DayPickerInput";
+import { formatDate, parseDate } from "react-day-picker/moment";
+import "react-day-picker/lib/style.css";
 
 class AddSessionPage extends React.Component {
   constructor(props) {
     super(props);
     this.state = { name: "" };
     this.state = { session_start: new Date() };
-    this.state = { session_end: "" };
+    this.state = { session_end: new Date() };
     this.state = { total_hours: "" };
     this.state = { professor_count: "" };
   }
@@ -57,8 +57,8 @@ class AddSessionPage extends React.Component {
   handleSessionStartChange(date) {
     this.setState({ session_start: date });
   }
-  handleSessionEndChange(event) {
-    this.setState({ session_end: event.target.value });
+  handleSessionEndChange(date) {
+    this.setState({ session_end: date });
   }
   handleTotalHoursChange(event) {
     this.setState({ total_hours: event.target.value });
@@ -68,6 +68,7 @@ class AddSessionPage extends React.Component {
   }
 
   render() {
+    const format = "DD/MM/YYYY";
     return (
       <div>
         <Breadcrumb className="troski">
@@ -89,16 +90,22 @@ class AddSessionPage extends React.Component {
               <Form.Group controlId="sessionStart">
                 <Form.Label>Почеток на сесија</Form.Label>
                 <br />
-                Date Picker test
-                <DatePicker
-                  placeholderText="Click to select a date"
+                <DayPickerInput
+                  inputProps={{ className: "form-control" }}
+                  formatDate={formatDate}
+                  parseDate={parseDate}
+                  format={format}
+                  value={new Date()}
+                  placeholder={`${formatDate(new Date(), format)}`}
                   selected={this.state.session_start}
                   onChange={this.handleSessionStartChange.bind(this)}
                 />
                 <Form.Group controlId="sessionEnd">
                   <Form.Label>Крај на сесија</Form.Label>
-                  <Form.Control
-                    type="text"
+                  <br />
+                  <DayPickerInput
+                    inputProps={{ className: "form-control" }}
+                    selected={this.state.session_end}
                     placeholder="Внеси крај на сесија"
                     onChange={this.handleSessionEndChange.bind(this)}
                   />
