@@ -72,11 +72,10 @@ class AddSubjectsPage extends React.Component {
               </Form.Group>
               <Form.Group controlId="semester">
                 <Form.Label>Семестар</Form.Label>
-                <Form.Control
-                  type="text"
-                  placeholder="Внеси го семестарот"
-                  onChange={this.handleSemesterChange.bind(this)}
-                />
+                <Form.Control as="select">
+                  <option>Летен</option>
+                  <option>Зимски</option>
+                </Form.Control>
               </Form.Group>
               <Form.Group>
                 <Button type="btn-primary">Додади</Button>

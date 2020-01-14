@@ -2,12 +2,16 @@ import React from "react";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 
+import TimePicker from "rc-time-picker";
+import moment from "moment";
+import "rc-time-picker/assets/index.css";
+
 import Breadcrumb from "react-bootstrap/Breadcrumb";
 class AddTimeTablePage extends React.Component {
   constructor(props) {
     super(props);
     this.state = { data: "No data" };
-    this.state = { selected_date: "" };
+    this.state = { selected_date: moment() };
   }
 
   getClassrooms() {
@@ -38,10 +42,10 @@ class AddTimeTablePage extends React.Component {
     console.log(this.getClassrooms());
   }
   setStartDate(date) {
-    this.setState({ selected_date: date });
+    this.setState({ selected_date: undefined });
   }
   render() {
-    const startDate = new Date();
+    const { value } = this.state;
     return (
       <div>
         <Breadcrumb className="troski">
@@ -73,14 +77,21 @@ class AddTimeTablePage extends React.Component {
               </Form.Group>
               <Form.Group controlId="formGroupStartExam">
                 <Form.Label>Почеток на испит</Form.Label>
-                <Form.Control
-                  type="text"
-                  placeholder="Внеси почеток на испит"
+                <br />
+                <TimePicker
+                  defaultValue={value}
+                  showSecond={false}
+                  onChange={this.handleValueChange}
                 />
               </Form.Group>
               <Form.Group controlId="formGroupEndExam">
                 <Form.Label>Крај на испит</Form.Label>
-                <Form.Control type="text" placeholder="Внеси крај на испит" />
+                <br />
+                <TimePicker
+                  defaultValue={value}
+                  showSecond={false}
+                  onChange={this.handleValueChange}
+                />
               </Form.Group>
               <Form.Group controlId="formGroupTeachers">
                 <Form.Label>Професори</Form.Label>
