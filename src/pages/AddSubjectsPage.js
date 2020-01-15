@@ -7,7 +7,7 @@ class AddSubjectsPage extends React.Component {
   constructor(props) {
     super(props);
     this.state = { name: "" };
-    this.state = { semester: "" };
+    this.state = { semester: "летен" };
   }
 
   addSubject(event) {
@@ -24,6 +24,7 @@ class AddSubjectsPage extends React.Component {
       })
       .join("&");
 
+    console.log(params);
     fetch("http://localhost:8080/subjects/add?" + searchParams, {
       mode: "cors",
       method: "POST",
@@ -72,9 +73,9 @@ class AddSubjectsPage extends React.Component {
               </Form.Group>
               <Form.Group controlId="semester">
                 <Form.Label>Семестар</Form.Label>
-                <Form.Control as="select">
-                  <option>Летен</option>
-                  <option>Зимски</option>
+                <Form.Control as="select" onChange={this.handleSemesterChange.bind(this)}>
+                  <option value="летен">Летен</option>
+                  <option value="зимски">Зимски</option>
                 </Form.Control>
               </Form.Group>
               <Form.Group>
