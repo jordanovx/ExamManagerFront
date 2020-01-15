@@ -1,6 +1,6 @@
 import React from "react";
 
-import { Table } from "react-bootstrap";
+import {Alert, Table} from "react-bootstrap";
 import Breadcrumb from "react-bootstrap/Breadcrumb";
 
 class ClassroomsPage extends React.Component {
@@ -45,6 +45,7 @@ class ClassroomsPage extends React.Component {
         </Breadcrumb>
         <div className="wrapper">
           <div className="classroomsTable">
+            {this.state.data ?
             <Table striped bordered hover>
               <thead>
                 <tr>
@@ -54,17 +55,18 @@ class ClassroomsPage extends React.Component {
                 </tr>
               </thead>
               <tbody>
-                {this.state.data
-                  ? this.state.data.map((item, i) => (
+              {this.state.data.map((item, i) => (
                       <tr>
                         {" "}
                         <td> {i + 1}</td> <td> {item.name}</td>{" "}
                         <td> {item.capacity}</td>
                       </tr>
-                    ))
-                  : "there is no data"}
+                    ))}
               </tbody>
             </Table>
+                : <Alert variant="danger" transition={null}>
+                  <Alert.Heading>Нема податоци</Alert.Heading>
+                </Alert>}
           </div>
         </div>
       </div>
