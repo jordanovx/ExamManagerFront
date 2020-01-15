@@ -34,7 +34,7 @@ class NavigationBar extends React.Component {
                 </NavDropdown>
                 <NavDropdown title="Распоред" id="collasible-nav-dropdown">
                   <NavDropdown.Item href="/timetable">Преглед</NavDropdown.Item>
-                  <NavDropdown.Item href="/addTimeTable">Додади</NavDropdown.Item>
+                  <NavDropdown.Item href="/timetable">Додади</NavDropdown.Item>
                 </NavDropdown>
                 <NavDropdown title="Сесии" id="collasible-nav-dropdown">
                   <NavDropdown.Item href="/session">Преглед</NavDropdown.Item>

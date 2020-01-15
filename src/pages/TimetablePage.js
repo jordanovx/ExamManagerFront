@@ -3,6 +3,7 @@ import { Form } from "react-bootstrap";
 import  {Inject, ScheduleComponent, Day, Week, WorkWeek, Month, Agenda} from '@syncfusion/ej2-react-schedule';
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
+import Breadcrumb from "react-bootstrap/Breadcrumb";
 
 class TimetablePage extends React.Component {
   constructor(props) {
@@ -41,6 +42,11 @@ class TimetablePage extends React.Component {
   render() {
     return (
       <div>
+        <Breadcrumb className="troski">
+          <Breadcrumb.Item href="/">Почетна</Breadcrumb.Item>
+          <Breadcrumb.Item href="/addsubjects">Распоред</Breadcrumb.Item>
+          <Breadcrumb.Item active>Додади</Breadcrumb.Item>
+        </Breadcrumb>
         <Row className="justify-content-md-center">
           <Col xs lg="11">
 
