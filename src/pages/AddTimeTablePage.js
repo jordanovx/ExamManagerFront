@@ -1,17 +1,14 @@
 import React from "react";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
-
-import TimePicker from "rc-time-picker";
-import moment from "moment";
+import FileDrop from 'react-file-drop';
 import "rc-time-picker/assets/index.css";
-
 import Breadcrumb from "react-bootstrap/Breadcrumb";
+
 class AddTimeTablePage extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { data: "No data" };
-    this.state = { selected_date: moment() };
+
   }
 
   getClassrooms() {
@@ -39,14 +36,15 @@ class AddTimeTablePage extends React.Component {
   }
 
   componentDidMount() {
-    console.log(this.getClassrooms());
   }
-  setStartDate(date) {
-    this.setState({ selected_date: undefined });
-  }
+  handleDrop = (files, event) => {
+
+      console.log(files, event);
+  };
+
   render() {
-    const { value } = this.state;
-    return (
+      const styles = { border: '1px solid black', width: 600, color: 'black', padding: 20 };
+      return (
       <div>
         <Breadcrumb className="troski">
           <Breadcrumb.Item href="/">Почетна</Breadcrumb.Item>
@@ -55,57 +53,11 @@ class AddTimeTablePage extends React.Component {
         </Breadcrumb>
 
         <div className="wrapper">
-          <div className="loginWrapper">
-            <Form>
-              <Form.Group controlId="formGroupPredmet">
-                <Form.Label>Предмет </Form.Label>
-                <Form.Control as="select">
-                  <option>..1..</option>
-                  <option>..2..</option>
-                </Form.Control>
-              </Form.Group>
-              <Form.Group controlId="formGroupSemester">
-                <Form.Label>Семестар</Form.Label>
-                <Form.Control as="select">
-                  <option>Летен</option>
-                  <option>Зимски</option>
-                </Form.Control>
-              </Form.Group>
-
-              <Form.Group controlId="formGroupDate">
-                <Form.Label>Дата</Form.Label>
-              </Form.Group>
-              <Form.Group controlId="formGroupStartExam">
-                <Form.Label>Почеток на испит</Form.Label>
-                <br />
-                <TimePicker
-                  defaultValue={value}
-                  showSecond={false}
-                  onChange={this.handleValueChange}
-                />
-              </Form.Group>
-              <Form.Group controlId="formGroupEndExam">
-                <Form.Label>Крај на испит</Form.Label>
-                <br />
-                <TimePicker
-                  defaultValue={value}
-                  showSecond={false}
-                  onChange={this.handleValueChange}
-                />
-              </Form.Group>
-              <Form.Group controlId="formGroupTeachers">
-                <Form.Label>Професори</Form.Label>
-                <Form.Control type="text" placeholder="Одбери професор" />
-              </Form.Group>
-              <Form.Group controlId="formGroupClassRooms">
-                <Form.Label>Простории</Form.Label>
-                <Form.Control type="text" placeholder="Одбери простории" />
-              </Form.Group>
-              <Form.Group>
-                <Button type="btn-primary">Додади</Button>
-              </Form.Group>
-            </Form>
-          </div>
+            <div id="react-file-drop" style={{styles}}>
+                <FileDrop onDrop={this.handleDrop}>
+                   Прикачи распоред
+                </FileDrop>
+            </div>
         </div>
       </div>
     );

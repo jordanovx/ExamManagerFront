@@ -26,7 +26,7 @@ function App() {
     <div className="App">
       <Header />
 
-      <NavigationBar className="nav"></NavigationBar>
+      <NavigationBar className="nav"> </NavigationBar>
 
       <BrowserRouter>
         <Route path="/" exact component={HomePage} />
