@@ -1,6 +1,13 @@
 import React from "react";
-import { Form } from "react-bootstrap";
-import  {Inject, ScheduleComponent, Day, Week, WorkWeek, Month, Agenda} from '@syncfusion/ej2-react-schedule';
+import {
+  Inject,
+  ScheduleComponent,
+  Day,
+  Week,
+  WorkWeek,
+  Month,
+  Agenda
+} from "@syncfusion/ej2-react-schedule";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Breadcrumb from "react-bootstrap/Breadcrumb";
@@ -49,11 +56,9 @@ class TimetablePage extends React.Component {
         </Breadcrumb>
         <Row className="justify-content-md-center">
           <Col xs lg="11">
-
             <ScheduleComponent>
-            <Inject services={[Day, Week, WorkWeek, Month, Agenda]} />
+              <Inject services={[Day, Week, WorkWeek, Month, Agenda]} />
             </ScheduleComponent>
-
           </Col>
         </Row>
       </div>
