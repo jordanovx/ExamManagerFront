@@ -55,7 +55,7 @@ class ButtonHome extends React.Component {
                     </Link>
                   </div>
                   <div className="btn btnStyle">
-                    <Link to="/TimeTable">
+                    <Link to="/addTimeTable">
                       <div className="btnHome">
                         <Button type="button" variant="info" block>
                           <FaRegCalendarPlus size={70} /> <br />
