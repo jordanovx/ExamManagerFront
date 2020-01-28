@@ -112,7 +112,7 @@
   border: 1px solid #ccc;
   border-radius: 15px 15px 15px 15px;
   padding: 20px;
-  margin: 30px auto 30px;
+  margin: 130px auto 222px;
   text-align: left;
   background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
 }
@@ -226,6 +226,11 @@
 }
 
 @media (min-width: 320px) and (max-width: 480px) {
+
+  .App {
+    width: 380px;
+  }
+
   div .container {
     margin-left: 0px;
     margin-right: 0px;
@@ -233,28 +238,33 @@
     padding-left: 0px;
   }
 
-  div .nav {
+  div .troski {
+    width: 375px;
+    margin-left: 20px;
+  }
+
+  div .nav .navbar-nav {
     display: none;
+  }
+
+  div .nav {
+    background-color: blue;
+    width: 424px;
   }
 
   div .btn-wrapper {
     display: inline-grid;
+    width: 410px;
     margin-left: 0px;
-    padding-left: 0px;
     margin-right: 0px;
-    padding-right: 0px;
-    margin-bottom: 0px;
-    background-color: #09d3ac;
-    width: 400px;
   }
 
   .footer {
-    color: red;
-    width: 400px;
+    width: 424px;
   }
 
   .btn-wrapper button {
-    width: 370px;
+    width: 300px;
     height: 130px;
   }
 
@@ -266,17 +276,37 @@
     width: 70%;
   }
 
+  div .loginWrapper {
+    margin: 50px 20px 20px 40px;
+    width: 320px;
+    height: 520px;
+
+  }
+
+  .troski ol {
+    margin-left: -20px;
+    width: 410px;
+  }
+
+
 }
 
 @media (min-width: 481px) and (max-width: 767px) {
 
+  div .nav {
+    width: 875px;
+  }
+
   div .container {
-    width: 767px;
+    width: 867px;
+    padding: 5px;
   }
 
   div .btn-wrapper {
     width: 480px;
     display: inline-grid;
+    margin-right: 0px;
+    margin-left: 0px;
   }
 
   .btn-wrapper button {
@@ -285,7 +315,31 @@
   }
 
   .footer {
-    width: 767px;
+    width: 875px;
+  }
+
+  div .loginWrapper {
+    margin-bottom: 352px;
+    margin-left: 145px;
+    margin-right: 50px;
+  }
+
+  div .nav-link {
+    width: 563px;
+  }
+
+  div .col {
+    background-color: red;
+    margin-left: 120px;
+  }
+
+
+
+  .finki-logo {
+    padding: 10px;
+    margin-bottom: 30px;
+    margin-left: 0px;
+    background-color: red;
   }
 
 }
@@ -295,28 +349,93 @@
 /* ##Device = Tablets, Ipads (portrait)
 ##Screen = B/w 768px to 1024px */
 @media (min-width: 768px) and (max-width: 1024px) {
-
-  .sideBar,
-  .bm-burger-button {
-    display: none;
+  .App {
+    width: 980px;
   }
 
-  .nav {
+  div .container .row .mt-5 {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+
+  .nav {}
+
+  div .btn-wrapper {
+    display: grid;
+  }
+
+  .btn-wrapper button {
+    width: 400px;
+  }
+
+  div .wrapper .container {
+    width: 960px;
+  }
+
+  div .navbar-nav {
+    width: 245px;
+    margin-left: 163px;
+  }
+
+  div .row .col-10 {
+    margin-left: 0px;
+  }
+
+  .finki-logo {
+    padding: 30px;
+    margin-left: 10px;
+    margin-bottom: 150px;
+  }
+
+  div .nav {
+    width: 980px;
+    margin-left: 0px;
     display: block;
+
   }
+
+  .footer {
+    margin-top: 50px;
+    width: 980px;
+  }
+
 }
 
 @media (min-width: 1024px) {
-  div .kopce .btn {
-    width: 206px;
+  div .wrapper .navbar .nav {
+    width: 1707px;
+    margin-left: 50px;
   }
 
-  .sideBar,
-  .bm-burger-button {
-    display: none;
+  div .wrapper .container {
+    height: 600px;
+  }
+
+  div .kopce .btn {
+    width: 20px;
+  }
+
+  a.najava.nav-link {
+    margin-left: 320px;
+  }
+
+
+  .footer {
+    margin-top: 30px;
+    width: 1707px;
   }
 
   .nav {
     display: block;
   }
+
+
+  .form-check-label {
+    margin-left: 14px;
+  }
+
+  .finki-logo {
+    margin-left: -200px;
+  }
+
 }
