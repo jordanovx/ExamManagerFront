@@ -1,7 +1,16 @@
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+}
+
 .App {
   text-align: center;
   width: 100%;
-
+  height: 100%;
+  background-color: white;
 }
 
 .SignUpPage {
@@ -16,6 +25,24 @@
 .troski ol {
   background-color: inherit;
   border: 0.5px solid #dee2e6;
+}
+
+div .wrapper {
+  width: 100%;
+  margin: 0 auto;
+  height: 100%;
+
+}
+
+div .loginWrapper {
+  width: 30%;
+  border: 1px solid #ccc;
+  margin: auto;
+  border-radius: 15px 15px 15px 15px;
+  padding: 20px;
+  margin: 5% 20% 10% 30%;
+  text-align: left;
+  background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
 }
 
 /* .RegForm {
@@ -58,12 +85,8 @@
   text-decoration: none;
   height: 5rem;
   position: relative;
-  margin-top: 20rem;
+  margin-top: 30rem;
   bottom: 0;
-}
-
-.sideBar {
-  margin-top: -49px;
 }
 
 .footer a {
@@ -75,12 +98,6 @@
   text-decoration: none;
   font-weight: bold;
 }
-
-/* .btnHome {
-  height: 170px;
-  color: white;
-  width: 100%;
-} */
 
 .btn-wrapper {
   justify-content: center;
@@ -102,19 +119,18 @@
 }
 
 .wrapper {
-  min-height: 650px;
+  min-height: 100%;
   width: 100%;
   margin: 0 auto;
 }
 
-.loginWrapper {
-  width: 400px;
-  border: 1px solid #ccc;
-  border-radius: 15px 15px 15px 15px;
-  padding: 20px;
-  margin: 130px auto 222px;
-  text-align: left;
-  background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
+
+
+.container .loginWrapper {
+  width: 80%;
+
+  margin: auto;
+
 }
 
 .classroomsTable {
@@ -228,7 +244,17 @@
 @media (min-width: 320px) and (max-width: 480px) {
 
   .App {
-    width: 380px;
+    width: 100%;
+    height: 740px;
+  }
+
+  .wrapper:nth-child(2) {
+    min-height: 350px;
+  }
+
+
+  div .wrapper {
+    min-height: 486px;
   }
 
   div .container {
@@ -236,20 +262,21 @@
     margin-right: 0px;
     padding-right: 0px;
     padding-left: 0px;
+    width: 100%;
+    height: 100%;
   }
 
   div .troski {
-    width: 375px;
-    margin-left: 20px;
+    width: 100%;
   }
 
   div .nav .navbar-nav {
     display: none;
+
   }
 
   div .nav {
-    background-color: blue;
-    width: 424px;
+    width: 100%;
   }
 
   div .btn-wrapper {
@@ -260,7 +287,8 @@
   }
 
   .footer {
-    width: 424px;
+    width: 100%;
+
   }
 
   .btn-wrapper button {
@@ -278,15 +306,20 @@
 
   div .loginWrapper {
     margin: 50px 20px 20px 40px;
-    width: 320px;
-    height: 520px;
-
+    width: 80%;
+    height: 60%;
   }
 
   .troski ol {
-    margin-left: -20px;
-    width: 410px;
+    width: 100%;
   }
+
+  div .wrapper .row {
+
+    width: 100%;
+    height: 100%;
+  }
+
 
 
 }
@@ -294,16 +327,18 @@
 @media (min-width: 481px) and (max-width: 767px) {
 
   div .nav {
-    width: 875px;
+    width: 100%;
   }
 
   div .container {
-    width: 867px;
+    width: 100%;
+    height: 100%;
     padding: 5px;
   }
 
   div .btn-wrapper {
-    width: 480px;
+    /*width: 480px;*/
+    width: 100%;
     display: inline-grid;
     margin-right: 0px;
     margin-left: 0px;
@@ -314,32 +349,31 @@
     height: 130px;
   }
 
-  .footer {
-    width: 875px;
-  }
-
-  div .loginWrapper {
-    margin-bottom: 352px;
-    margin-left: 145px;
-    margin-right: 50px;
-  }
 
   div .nav-link {
-    width: 563px;
+    width: 100%
   }
 
   div .col {
-    background-color: red;
-    margin-left: 120px;
+    margin-right: 0px;
+
   }
 
+  div .col-10 {
+    margin-left: 10%;
+    margin-right: 5%;
+    width: 100%;
+  }
+
+  div .col-10 .navbar-nav {
+    margin-left: 0px;
+  }
 
 
   .finki-logo {
     padding: 10px;
-    margin-bottom: 30px;
-    margin-left: 0px;
-    background-color: red;
+    margin-bottom: 5%;
+    margin-left: 20%;
   }
 
 }
@@ -349,8 +383,29 @@
 /* ##Device = Tablets, Ipads (portrait)
 ##Screen = B/w 768px to 1024px */
 @media (min-width: 768px) and (max-width: 1024px) {
-  .App {
-    width: 980px;
+
+  .App .wrapper {
+    width: 100%;
+    height: 50%;
+    margin-bottom: 38rem;
+  }
+
+  div .loginWrapper {
+    width: 40%;
+    margin-left: 30%;
+  }
+
+  div .classroomsTable {
+    min-height: 200px;
+  }
+
+  div .row:nth-child(2) {
+    width: 100%;
+    margin-left: 0px;
+  }
+
+  .row .col-lg-11 {
+    width: 100%;
   }
 
   div .container .row .mt-5 {
@@ -358,57 +413,83 @@
     margin-right: 0px;
   }
 
-  .nav {}
-
   div .btn-wrapper {
     display: grid;
+    margin-left: 25%;
   }
 
   .btn-wrapper button {
-    width: 400px;
+    width: 600px;
   }
 
-  div .wrapper .container {
-    width: 960px;
+  div .container {
+    width: 100%;
+  }
+
+  div .loginWrapper {
+    margin-bottom: 91rem;
   }
 
   div .navbar-nav {
-    width: 245px;
-    margin-left: 163px;
+    width: 100%;
+    margin-left: 0px;
   }
 
-  div .row .col-10 {
-    margin-left: 0px;
+  div .row {
+    width: 100%;
+
+  }
+
+  div .row .col-10 .navbar-nav {
+    margin-left: 55px;
   }
 
   .finki-logo {
-    padding: 30px;
-    margin-left: 10px;
-    margin-bottom: 150px;
+    padding: 15px;
+    margin-left: 6px;
+    margin-bottom: 0px;
   }
 
   div .nav {
-    width: 980px;
-    margin-left: 0px;
+    width: 100%;
     display: block;
-
   }
 
   .footer {
-    margin-top: 50px;
-    width: 980px;
-  }
 
+    margin-top: 50px;
+    width: 100%;
+    bottom: 0;
+  }
 }
 
-@media (min-width: 1024px) {
+
+
+@media (min-width: 1281px) {
+
+  .App div .wrapper {
+    width: 100%;
+    height: 450px;
+  }
+
   div .wrapper .navbar .nav {
-    width: 1707px;
+    width: 100%;
     margin-left: 50px;
+    background-color: yellow;
+  }
+
+  .container .loginWrapper {
+    margin-bottom: 91rem;
+    width: 40%;
   }
 
   div .wrapper .container {
     height: 600px;
+  }
+
+  .navbar-expand-lg>.container,
+  .navbar-expand-lg>.container-fluid {
+    width: 100%;
   }
 
   div .kopce .btn {
@@ -416,26 +497,26 @@
   }
 
   a.najava.nav-link {
-    margin-left: 320px;
+    margin-left: 20px;
   }
 
 
   .footer {
     margin-top: 30px;
-    width: 1707px;
+    width: 100%;
+    position: fixed;
   }
 
   .nav {
     display: block;
   }
 
-
   .form-check-label {
     margin-left: 14px;
   }
 
   .finki-logo {
-    margin-left: -200px;
+    margin-left: 0px;
   }
 
 }
