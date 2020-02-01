@@ -19,7 +19,7 @@ body {
 }
 
 .App-logo {
-  height: 40vmin;
+  height: 30vmin;
 }
 
 .troski ol {
@@ -128,7 +128,6 @@ div .loginWrapper {
 
 .container .loginWrapper {
   width: 80%;
-
   margin: auto;
 
 }
@@ -315,7 +314,6 @@ div .loginWrapper {
   }
 
   div .wrapper .row {
-
     width: 100%;
     height: 100%;
   }
@@ -456,31 +454,56 @@ div .loginWrapper {
   }
 
   .footer {
-
     margin-top: 50px;
     width: 100%;
     bottom: 0;
+  }
+
+  .row:nth-child(2) {
+    margin-right: 0px;
   }
 }
 
 
 
-@media (min-width: 1281px) {
+@media (min-width: 1280px) {
+
+  .App {
+    width: 100%;
+  }
 
   .App div .wrapper {
     width: 100%;
-    height: 450px;
+    height: 860px;
+    margin-left: 0px;
   }
 
-  div .wrapper .navbar .nav {
+  div .navbar-nav .nav-link {
+    margin-left: 20px;
+    /* background-color: red; */
+  }
+
+  div .col-10 .navbar-nav {
     width: 100%;
-    margin-left: 50px;
+    font-size: 2rem;
+    margin: 15px;
+  }
+
+  div .navbar {
+    width: 100%;
+    margin-left: 0px;
     background-color: yellow;
   }
 
   .container .loginWrapper {
+
     margin-bottom: 91rem;
     width: 40%;
+  }
+
+  .wrapper .loginWrapper {
+    background-color: #09d3ac;
+    margin-top: 5rem;
   }
 
   div .wrapper .container {
@@ -502,9 +525,9 @@ div .loginWrapper {
 
 
   .footer {
-    margin-top: 30px;
+
     width: 100%;
-    position: fixed;
+    position: relative;
   }
 
   .nav {
@@ -512,11 +535,20 @@ div .loginWrapper {
   }
 
   .form-check-label {
-    margin-left: 14px;
+    margin-left: 15px;
+  }
+
+  .finki-logo img {
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+
+  .row:nth-child(2) {
+    margin-right: 0px;
   }
 
   .finki-logo {
-    margin-left: 0px;
+    margin-left: 100px;
   }
 
 }
