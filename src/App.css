@@ -13,10 +13,31 @@ body {
   background-color: white;
 }
 
-.SignUpPage {
-  background-color: yellow;
+/* Menu */
 
+.menu {
+  width: 100%;
+  display: block;
+  text-align: center;
+  padding: 0px;
 }
+.menu ul {
+  position: relative;
+  top: 0px;
+  font-size: 24px;
+  padding: 0px;
+}
+.menu li {
+  list-style: outside none none;
+  margin: 10px 0px;
+  padding: 0;
+  cursor: pointer;
+}
+.menu li:hover {
+  color: skyblue;
+}
+
+/* */
 
 .App-logo {
   height: 30vmin;
@@ -31,7 +52,6 @@ div .wrapper {
   width: 100%;
   margin: 0 auto;
   height: 100%;
-
 }
 
 div .loginWrapper {
@@ -124,12 +144,9 @@ div .loginWrapper {
   margin: 0 auto;
 }
 
-
-
 .container .loginWrapper {
   width: 80%;
   margin: auto;
-
 }
 
 .classroomsTable {
@@ -166,7 +183,7 @@ div .loginWrapper {
   width: 100%;
 }
 
-.file-drop>.file-drop-target {
+.file-drop > .file-drop-target {
   /* basic styles */
   position: absolute;
   top: 0;
@@ -206,7 +223,7 @@ div .loginWrapper {
   /* --------------- */
 }
 
-.file-drop>.file-drop-target.file-drop-dragging-over-frame {
+.file-drop > .file-drop-target.file-drop-dragging-over-frame {
   /* overlay a black mask when dragging over the frame */
 
   /* --------------- */
@@ -216,7 +233,7 @@ div .loginWrapper {
   /* --------------- */
 }
 
-.file-drop>.file-drop-target.file-drop-dragging-over-target {
+.file-drop > .file-drop-target.file-drop-dragging-over-target {
   /* turn stuff orange when we are dragging over the target */
 
   box-shadow: 0 0 13px 3px gray;
@@ -231,7 +248,7 @@ div .loginWrapper {
 
 #react-file-drop:hover {
   cursor: pointer;
-  box-shadow: 0 0 20px rgba(33, 33, 33, .2);
+  box-shadow: 0 0 20px rgba(33, 33, 33, 0.2);
   transition: box-shadow 0.3s;
 }
 
@@ -241,7 +258,6 @@ div .loginWrapper {
 }
 
 @media (min-width: 320px) and (max-width: 480px) {
-
   .App {
     width: 100%;
     height: 740px;
@@ -251,16 +267,40 @@ div .loginWrapper {
     min-height: 350px;
   }
 
-
-  div .wrapper {
-    min-height: 486px;
+  .wrapper .container div {
+    width: 100%;
+    margin-left: 0px;
   }
 
-  div .container {
+  .Navbar > div {
+    top: 0px !important;
+    right: 0px !important;
+    left: -30px !important;
+    background-color: rgb(91, 192, 222);
+    text-decoration: none;
+  }
+
+  .burger {
+    width: 2em;
+    height: 0px;
+    margin-top: -30px;
+    margin-bottom: 0px;
+    margin-left: -140px; /*
+    margin-bottom: 0px;
+    margin-right: 100px; */
+    /* display: none; */
+  }
+
+  .burger svg {
+    height: 3em;
+    width: 2em;
+  }
+
+  div .wrapper .container {
     margin-left: 0px;
     margin-right: 0px;
     padding-right: 0px;
-    padding-left: 0px;
+    padding-left: 30px;
     width: 100%;
     height: 100%;
   }
@@ -271,11 +311,12 @@ div .loginWrapper {
 
   div .nav .navbar-nav {
     display: none;
-
   }
 
   div .nav {
     width: 100%;
+    margin-right: 0px;
+    margin-left: 0px;
   }
 
   div .btn-wrapper {
@@ -287,7 +328,6 @@ div .loginWrapper {
 
   .footer {
     width: 100%;
-
   }
 
   .btn-wrapper button {
@@ -318,14 +358,44 @@ div .loginWrapper {
     height: 100%;
   }
 
-
-
+  .finki-logo {
+    width: 45px;
+    height: 45px;
+    margin-top: 10px;
+  }
 }
 
 @media (min-width: 481px) and (max-width: 767px) {
-
   div .nav {
     width: 100%;
+  }
+
+  div .nav .navbar-nav {
+    display: none;
+  }
+
+  .Navbar > div {
+    top: 0px !important;
+    right: 0px !important;
+    left: -30px !important;
+    background-color: rgb(91, 192, 222);
+    text-decoration: none;
+  }
+
+  .burger {
+    width: 50px;
+    height: 50px;
+    margin-top: 26px;
+    margin-bottom: -23px;
+    margin-left: -410px; /*
+    margin-bottom: 0px;
+    margin-right: 100px; */
+    /* display: none; */
+  }
+
+  .burger svg {
+    height: 3em;
+    width: 2em;
   }
 
   div .container {
@@ -347,14 +417,12 @@ div .loginWrapper {
     height: 130px;
   }
 
-
   div .nav-link {
-    width: 100%
+    width: 100%;
   }
 
   div .col {
     margin-right: 0px;
-
   }
 
   div .col-10 {
@@ -367,25 +435,52 @@ div .loginWrapper {
     margin-left: 0px;
   }
 
-
   .finki-logo {
     padding: 10px;
     margin-bottom: 5%;
     margin-left: 20%;
   }
-
 }
-
-
 
 /* ##Device = Tablets, Ipads (portrait)
 ##Screen = B/w 768px to 1024px */
 @media (min-width: 768px) and (max-width: 1024px) {
-
   .App .wrapper {
     width: 100%;
     height: 50%;
     margin-bottom: 38rem;
+  }
+
+  div .nav .navbar-nav {
+    display: none;
+  }
+
+  .Navbar > div {
+    top: 0px !important;
+    right: 0px !important;
+    left: -20px !important;
+    background-color: rgb(91, 192, 222);
+    text-decoration: none;
+  }
+
+  header.burger svg {
+    color: rgb(43, 255, 0);
+    float: right;
+    margin-top: -205px;
+    margin-left: 430px;
+    margin-right: 300px;
+    bottom: 0;
+    height: 2em;
+    width: 3em;
+  }
+
+  .burger {
+    width: 5em;
+    height: 0em;
+    margin-top: -30px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+    margin-right: 600px;
   }
 
   div .loginWrapper {
@@ -435,7 +530,6 @@ div .loginWrapper {
 
   div .row {
     width: 100%;
-
   }
 
   div .row .col-10 .navbar-nav {
@@ -464,10 +558,7 @@ div .loginWrapper {
   }
 }
 
-
-
 @media (min-width: 1280px) {
-
   .App {
     width: 100%;
   }
@@ -496,7 +587,6 @@ div .loginWrapper {
   }
 
   .container .loginWrapper {
-
     margin-bottom: 91rem;
     width: 40%;
   }
@@ -510,8 +600,8 @@ div .loginWrapper {
     height: 600px;
   }
 
-  .navbar-expand-lg>.container,
-  .navbar-expand-lg>.container-fluid {
+  .navbar-expand-lg > .container,
+  .navbar-expand-lg > .container-fluid {
     width: 100%;
   }
 
@@ -523,9 +613,7 @@ div .loginWrapper {
     margin-left: 20px;
   }
 
-
   .footer {
-
     width: 100%;
     position: relative;
   }
@@ -550,5 +638,4 @@ div .loginWrapper {
   .finki-logo {
     margin-left: 100px;
   }
-
 }

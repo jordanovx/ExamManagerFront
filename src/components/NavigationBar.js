@@ -2,6 +2,7 @@ import React from "react";
 import { Navbar, Nav, Row, Col, Container } from "react-bootstrap";
 import img from "../images/logo_finki.png";
 import NavDropdown from "react-bootstrap/NavDropdown";
+import DrawerHome from "../components/DrawerHome";
 class NavigationBar extends React.Component {
   render() {
     return (
@@ -19,7 +20,9 @@ class NavigationBar extends React.Component {
                 {" "}
                 <img src={img} alt="logo" height="55" width="55" />{" "}
               </a>
+              <DrawerHome />
             </Col>
+
             <Col xs={10}>
               <Nav>
                 <Nav.Link href="/"> Почетна </Nav.Link>

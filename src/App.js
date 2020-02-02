@@ -20,7 +20,7 @@ import SessionPage from "./pages/SessionPage";
 import AddSessionPage from "./pages/AddSessionPage";
 import NavigationBar from "./components/NavigationBar";
 import Footer from "./components/Footer";
-
+import DrawerHome from "./components/DrawerHome";
 function App() {
   return (
     <div className="App">
@@ -41,6 +41,7 @@ function App() {
         <Route path="/subjects" component={SubjectsPage} />
         <Route path="/addsubjects" component={AddSubjectsPage} />
         <Route path="/session" component={SessionPage} />
+        <Route path="/drawer" component={DrawerHome} />
 
         <Route path="/addsession" component={AddSessionPage} />
       </BrowserRouter>
