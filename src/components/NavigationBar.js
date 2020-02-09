@@ -18,7 +18,7 @@ class NavigationBar extends React.Component {
             <Col>
               <a href="/" className="finki-logo">
                 {" "}
-                <img src={img} alt="logo" height="55" width="55" />{" "}
+                <img src={img} alt="logo" height="45" width="45" />{" "}
               </a>
               <DrawerHome />
             </Col>

@@ -43,12 +43,24 @@ class DrawerHome extends React.Component {
             }
           >
             <ul className="menu">
-              <li>Почетна</li>
-              <li>Професори</li>
-              <li>Простории</li>
-              <li>Предмети</li>
-              <li>Распоред</li>
-              <li>Сесии</li>
+              <li>
+                <a href="/home"> Почетна </a>
+              </li>
+              <li>
+                <a href="/teachers"> Професори </a>
+              </li>
+              <li>
+                <a href="/classrooms"> Простории</a>
+              </li>
+              <li>
+                <a href="/subjects">Предмети</a>
+              </li>
+              <li>
+                <a href="/TimeTable">Распоред</a>
+              </li>
+              <li>
+                <a href="/Session">Сесии</a>
+              </li>
             </ul>
           </Drawer>
         </div>
