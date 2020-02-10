@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import "./App.css";
 import "./SideBar.css";
 
@@ -23,30 +23,32 @@ import Footer from "./components/Footer";
 import DrawerHome from "./components/DrawerHome";
 import NoMatchPage from "./components/NoMatchPage";
 
+//test
 function App() {
   return (
     <div className="App">
       <Header />
-
       <NavigationBar className="nav"> </NavigationBar>
 
       <Router>
-        <Route exact path="/" component={HomePage} />
-        <Route exact path="/login" component={LoginPage} />
-        <Route exact path="/signup" component={SignUpPage} />
-        <Route exact path="/classrooms" component={ClassroomsPage} />
-        <Route exact path="/teachers" component={TeachersPage} />
-        <Route exact path="/timetable" component={TimetablePage} />
-        <Route exact path="/addclassroom" component={AddClassroomPage} />
-        <Route exact path="/addteachers" component={AddTeachersPage} />
-        <Route exact path="/addtimetable" component={AddTimeTablePage} />
-        <Route exact path="/subjects" component={SubjectsPage} />
-        <Route exact path="/addsubjects" component={AddSubjectsPage} />
-        <Route exact path="/session" component={SessionPage} />
-        <Route exact path="/drawer" component={DrawerHome} />
+        <Switch>
+          <Route exact path="/" component={HomePage} />
+          <Route exact path="/login" component={LoginPage} />
+          <Route exact path="/signup" component={SignUpPage} />
+          <Route exact path="/classrooms" component={ClassroomsPage} />
+          <Route exact path="/teachers" component={TeachersPage} />
+          <Route exact path="/timetable" component={TimetablePage} />
+          <Route exact path="/addclassroom" component={AddClassroomPage} />
+          <Route exact path="/addteachers" component={AddTeachersPage} />
+          <Route exact path="/addtimetable" component={AddTimeTablePage} />
+          <Route exact path="/subjects" component={SubjectsPage} />
+          <Route exact path="/addsubjects" component={AddSubjectsPage} />
+          <Route exact path="/session" component={SessionPage} />
+          <Route exact path="/drawer" component={DrawerHome} />
 
-        <Route exact path="/addsession" component={AddSessionPage} />
-        <Route component={NoMatchPage}></Route>
+          <Route exact path="/addsession" component={AddSessionPage} />
+          <Route component={NoMatchPage}></Route>
+        </Switch>
       </Router>
       <Footer />
     </div>
