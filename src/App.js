@@ -47,7 +47,7 @@ function App() {
           <Route exact path="/drawer" component={DrawerHome} />
 
           <Route exact path="/addsession" component={AddSessionPage} />
-          <Route component={NoMatchPage}></Route>
+          <Route component={NoMatchPage} />
         </Switch>
       </Router>
       <Footer />
