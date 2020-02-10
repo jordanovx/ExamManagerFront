@@ -16,14 +16,10 @@ import AddTeachersPage from "./pages/AddTeachersPage";
 import AddTimeTablePage from "./pages/AddTimeTablePage";
 import AddSubjectsPage from "./pages/AddSubjectsPage";
 import SubjectsPage from "./pages/SubjectsPage";
-import SessionPage from "./pages/SessionPage";
-import AddSessionPage from "./pages/AddSessionPage";
-import NavigationBar from "./components/NavigationBar";
 import Footer from "./components/Footer";
 import DrawerHome from "./components/DrawerHome";
 import NoMatchPage from "./components/NoMatchPage";
 
-//test
 function App() {
   return (
     <div className="App">
@@ -42,10 +38,7 @@ function App() {
           <Route exact path="/addtimetable" component={AddTimeTablePage} />
           <Route exact path="/subjects" component={SubjectsPage} />
           <Route exact path="/addsubjects" component={AddSubjectsPage} />
-          <Route exact path="/session" component={SessionPage} />
           <Route exact path="/drawer" component={DrawerHome} />
-
-          <Route exact path="/addsession" component={AddSessionPage} />
 
           <Route component={NoMatchPage} />
         </Switch>

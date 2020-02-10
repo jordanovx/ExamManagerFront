@@ -79,14 +79,6 @@ class DrawerHome extends React.Component {
                   </li>
                 </ol>
               </li>
-              <li>
-                <a href="/Session">Сесии</a>
-                <ol>
-                  <li>
-                    <a href="/addSession">Додади +</a>
-                  </li>
-                </ol>
-              </li>
             </ul>
           </Drawer>
         </div>
