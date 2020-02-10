@@ -1692,7 +1692,7 @@ div .loginWrapper {
   }
 
   div .navbar-nav .nav-link {
-    margin-left: 20px;
+    margin-left: 0px;
     /* background-color: red; */
   }
 
@@ -1745,11 +1745,11 @@ div .loginWrapper {
   }
 
   .form-check-label {
-    margin-left: 15px;
-  }
+    margin-left: 15px;}
 
   .finki-logo img {
     margin-top: 12px;
+    margin-left: 60px;
     margin-bottom: 5px;
   }
 
@@ -1758,6 +1758,6 @@ div .loginWrapper {
   }
 
   .finki-logo {
-    margin-left: 100px;
+    margin-left: 10px;
   }
 }

@@ -52,10 +52,6 @@ class NavigationBar extends React.Component {
                     Додади
                   </NavDropdown.Item>
                 </NavDropdown>
-                <NavDropdown title="Сесии" id="collasible-nav-dropdown">
-                  <NavDropdown.Item href="/session">Преглед</NavDropdown.Item>
-                  <NavDropdown.Item href="/addsession">Додади</NavDropdown.Item>
-                </NavDropdown>
                 <Nav.Link href="\login" className="najava">
                   Најава
                 </Nav.Link>

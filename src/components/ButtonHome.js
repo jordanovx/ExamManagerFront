@@ -9,9 +9,7 @@ import {
   FaUserFriends,
   FaHome,
   FaBookMedical,
-  FaCalendarWeek,
-  FaBookOpen,
-  FaBookReader
+  FaCalendarWeek
 } from "react-icons/fa";
 
 class ButtonHome extends React.Component {
@@ -64,16 +62,6 @@ class ButtonHome extends React.Component {
                       </div>
                     </Link>
                   </div>
-                  <div className="btn btnStyle">
-                    <Link to="/addSession">
-                      <div className=" btnHome">
-                        <Button type="button" variant="info" block>
-                          <FaBookOpen size={70} /> <br />
-                          Додади Сесија
-                        </Button>
-                      </div>
-                    </Link>
-                  </div>
                 </div>
                 <div className="btn-wrapper ">
                   <div className="btn btnStyle">
@@ -115,17 +103,6 @@ class ButtonHome extends React.Component {
                         <Button type="button" variant="info" block>
                           <FaCalendarWeek size={70} /> <br />
                           РАСПОРЕД
-                        </Button>
-                      </div>
-                    </Link>
-                  </div>
-
-                  <div className="btn btnStyle">
-                    <Link to="/Session">
-                      <div className="btnHome">
-                        <Button type="button" variant="info" block>
-                          <FaBookReader size={70} /> <br />
-                          СЕСИЈА
                         </Button>
                       </div>
                     </Link>
