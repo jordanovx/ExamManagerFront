@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { BrowserRouter as Router, Route } from "react-router-dom";
 import "./App.css";
 import "./SideBar.css";
 
@@ -31,7 +31,6 @@ function App() {
       <NavigationBar className="nav"> </NavigationBar>
 
       <Router>
-          <Switch>
         <Route exact path="/" component={HomePage} />
         <Route exact path="/login" component={LoginPage} />
         <Route exact path="/signup" component={SignUpPage} />
@@ -47,8 +46,7 @@ function App() {
         <Route exact path="/drawer" component={DrawerHome} />
 
         <Route exact path="/addsession" component={AddSessionPage} />
-        <Route component={NoMatchPage}/>
-          </Switch>
+        <Route component={NoMatchPage}></Route>
       </Router>
       <Footer />
     </div>
