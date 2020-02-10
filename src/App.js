@@ -23,6 +23,7 @@ import Footer from "./components/Footer";
 import DrawerHome from "./components/DrawerHome";
 import NoMatchPage from "./components/NoMatchPage";
 
+//test
 function App() {
   return (
     <div className="App">
@@ -46,7 +47,8 @@ function App() {
           <Route exact path="/drawer" component={DrawerHome} />
 
           <Route exact path="/addsession" component={AddSessionPage} />
-          <Route component={NoMatchPage} />
+
+          <Route component={NoMatchPage}></Route>
         </Switch>
       </Router>
       <Footer />
