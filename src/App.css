@@ -55,17 +55,18 @@ body {
 
 div .wrapper {
   width: 100%;
-  margin: 0 auto;
-  height: 100%;
+  margin-top: 5rem auto;
+  height: 50%;
 }
 
 div .loginWrapper {
-  width: 30%;
+  width: 50%;
+  height: 30%;
   border: 1px solid #ccc;
   margin: auto;
   border-radius: 15px 15px 15px 15px;
   padding: 20px;
-  margin: 5% 20% 10% 30%;
+  margin: 5% 25% 10% 30%;
   text-align: left;
   background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
 }
@@ -97,7 +98,7 @@ div .loginWrapper {
   text-decoration: none;
   height: 5rem;
   position: relative;
-  margin-top: 30rem;
+  margin-top: 37rem;
   bottom: 0;
 }
 
@@ -136,9 +137,8 @@ div .loginWrapper {
   margin: 0 auto;
 }
 
-.container .loginWrapper {
-  width: 80%;
-  margin: auto;
+div .loginWrapper {
+  width: 50%;
 }
 
 .classroomsTable {
@@ -1006,7 +1006,6 @@ div .loginWrapper {
     display: none;
   }
 
-
   .wrapperError {
     width: 100%;
     height: 100%;
@@ -1318,9 +1317,9 @@ div .loginWrapper {
   }
 
   div .loginWrapper {
-    width: 40%;
-    margin-left: 30%;
+    width: 30%;
   }
+
 
   div .classroomsTable {
     min-height: 200px;
@@ -1351,10 +1350,6 @@ div .loginWrapper {
 
   div .container {
     width: 100%;
-  }
-
-  div .loginWrapper {
-    margin-bottom: 91rem;
   }
 
   div .navbar-nav {
@@ -1705,18 +1700,18 @@ div .loginWrapper {
   div .navbar {
     width: 100%;
     margin-left: 0px;
-    background-color: yellow;
   }
 
-  .container .loginWrapper {
-    margin-bottom: 91rem;
-    width: 40%;
+  .navbar-expand-lg .navbar-nav .nav-link {
+    padding-right: 3.5rem;
   }
 
-  .wrapper .loginWrapper {
-    background-color: #09d3ac;
-    margin-top: 5rem;
+  div .loginWrapper {
+    width: 30%;
+    margin-left: 35%;
   }
+
+
 
   div .wrapper .container {
     height: 600px;
@@ -1745,7 +1740,8 @@ div .loginWrapper {
   }
 
   .form-check-label {
-    margin-left: 15px;}
+    margin-left: 15px;
+  }
 
   .finki-logo img {
     margin-top: 12px;
