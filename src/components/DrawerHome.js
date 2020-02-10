@@ -2,6 +2,7 @@ import React, { Fragment } from "react";
 import Drawer from "react-motion-drawer";
 
 import { FaBars } from "react-icons/fa";
+
 class DrawerHome extends React.Component {
   constructor(props) {
     super(props);
@@ -44,7 +45,7 @@ class DrawerHome extends React.Component {
           >
             <ul className="menu">
               <li>
-                <a href="/home"> Почетна </a>
+                <a href="/"> Почетна </a>
               </li>
               <li>
                 <a href="/teachers"> Професори </a>
