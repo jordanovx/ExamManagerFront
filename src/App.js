@@ -48,7 +48,7 @@ function App() {
 
           <Route exact path="/addsession" component={AddSessionPage} />
 
-          <Route component={NoMatchPage}></Route>
+          <Route component={NoMatchPage}/>
         </Switch>
       </Router>
       <Footer />
