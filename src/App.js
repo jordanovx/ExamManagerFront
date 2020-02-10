@@ -28,7 +28,6 @@ function App() {
   return (
     <div className="App">
       <Header />
-      <NavigationBar className="nav"> </NavigationBar>
 
       <Router>
         <Switch>
@@ -48,7 +47,7 @@ function App() {
 
           <Route exact path="/addsession" component={AddSessionPage} />
 
-          <Route component={NoMatchPage}/>
+          <Route component={NoMatchPage} />
         </Switch>
       </Router>
       <Footer />

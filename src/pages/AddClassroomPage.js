@@ -2,6 +2,7 @@ import React from "react";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 import Breadcrumb from "react-bootstrap/Breadcrumb";
+import NavigationBar from "../components/NavigationBar";
 class AddClassroomPage extends React.Component {
   constructor(props) {
     super(props);
@@ -53,6 +54,7 @@ class AddClassroomPage extends React.Component {
   render() {
     return (
       <div>
+        <NavigationBar className="nav"> </NavigationBar>
         <Breadcrumb className="troski">
           <Breadcrumb.Item href="/">Почетна</Breadcrumb.Item>
           <Breadcrumb.Item href="/addclassroom">Просторија</Breadcrumb.Item>

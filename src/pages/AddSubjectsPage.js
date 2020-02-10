@@ -2,7 +2,7 @@ import React from "react";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 import Breadcrumb from "react-bootstrap/Breadcrumb";
-
+import NavigationBar from "../components/NavigationBar";
 class AddSubjectsPage extends React.Component {
   constructor(props) {
     super(props);
@@ -55,6 +55,7 @@ class AddSubjectsPage extends React.Component {
   render() {
     return (
       <div>
+        <NavigationBar className="nav"> </NavigationBar>
         <Breadcrumb className="troski">
           <Breadcrumb.Item href="/">Почетна</Breadcrumb.Item>
           <Breadcrumb.Item href="/addsubjects">Предмети</Breadcrumb.Item>
@@ -73,7 +74,10 @@ class AddSubjectsPage extends React.Component {
               </Form.Group>
               <Form.Group controlId="semester">
                 <Form.Label>Семестар</Form.Label>
-                <Form.Control as="select" onChange={this.handleSemesterChange.bind(this)}>
+                <Form.Control
+                  as="select"
+                  onChange={this.handleSemesterChange.bind(this)}
+                >
                   <option value="летен">Летен</option>
                   <option value="зимски">Зимски</option>
                 </Form.Control>

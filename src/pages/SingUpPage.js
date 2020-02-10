@@ -1,11 +1,12 @@
 import React from "react";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
-
+import NavigationBar from "../components/NavigationBar";
 class SignUpPage extends React.Component {
   render() {
     return (
       <div>
+        <NavigationBar className="nav"> </NavigationBar>
         <div className="loginWrapper">
           <Form>
             <Form.Group controlId="formGroupIme">

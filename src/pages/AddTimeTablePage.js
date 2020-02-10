@@ -7,7 +7,7 @@ import xls from "../images/xls.png";
 import csv from "../images/csv.png";
 import { default as xlsx } from "../images/xls.png";
 import unknown from "../images/unknown.png";
-
+import NavigationBar from "../components/NavigationBar";
 class AddTimeTablePage extends React.Component {
   constructor(props) {
     super(props);
@@ -105,6 +105,7 @@ class AddTimeTablePage extends React.Component {
   render() {
     return (
       <div>
+        <NavigationBar className="nav"> </NavigationBar>
         <Breadcrumb className="troski">
           <Breadcrumb.Item href="/">Почетна</Breadcrumb.Item>
           <Breadcrumb.Item href="/addtimetable">Распоред</Breadcrumb.Item>

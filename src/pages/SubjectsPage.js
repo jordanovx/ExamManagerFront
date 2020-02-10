@@ -1,8 +1,8 @@
 import React from "react";
 
-import {Alert, Table} from "react-bootstrap";
+import { Alert, Table } from "react-bootstrap";
 import Breadcrumb from "react-bootstrap/Breadcrumb";
-
+import NavigationBar from "../components/NavigationBar";
 class SubjectsPage extends React.Component {
   constructor(props) {
     super(props);
@@ -38,6 +38,7 @@ class SubjectsPage extends React.Component {
   render() {
     return (
       <div>
+        <NavigationBar className="nav"> </NavigationBar>
         <Breadcrumb className="troski">
           <Breadcrumb.Item href="/">Почетна</Breadcrumb.Item>
           <Breadcrumb.Item href="/subjects">Предмети</Breadcrumb.Item>
@@ -45,30 +46,30 @@ class SubjectsPage extends React.Component {
         </Breadcrumb>
         <div className="wrapper">
           <div className="classroomsTable">
-            {this.state.data ?
-                <Table striped bordered hover>
-                  <thead>
+            {this.state.data ? (
+              <Table striped bordered hover>
+                <thead>
                   <tr>
                     <th></th>
                     <th>Име на предмет</th>
                     <th>Семестар</th>
                   </tr>
-                  </thead>
-                  <tbody>
+                </thead>
+                <tbody>
                   {this.state.data.map((item, i) => (
-                          <tr>
-                            {" "}
-                            <td> {i + 1}</td>
-                            <td> {item.name}</td>
-                            {" "}
-                            <td> {item.semester}</td>
-                          </tr>
-                      ))}
-                  </tbody>
-                </Table>
-            :<Alert variant="danger" transition={null}>
-                  <Alert.Heading>Нема податоци</Alert.Heading>
-                </Alert>}
+                    <tr>
+                      {" "}
+                      <td> {i + 1}</td>
+                      <td> {item.name}</td> <td> {item.semester}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </Table>
+            ) : (
+              <Alert variant="danger" transition={null}>
+                <Alert.Heading>Нема податоци</Alert.Heading>
+              </Alert>
+            )}
           </div>
         </div>
       </div>

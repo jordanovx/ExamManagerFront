@@ -5,7 +5,7 @@ import Breadcrumb from "react-bootstrap/Breadcrumb";
 import DayPickerInput from "react-day-picker/DayPickerInput";
 import { formatDate, parseDate } from "react-day-picker/moment";
 import "react-day-picker/lib/style.css";
-
+import NavigationBar from "../components/NavigationBar";
 class AddSessionPage extends React.Component {
   constructor(props) {
     super(props);
@@ -71,6 +71,7 @@ class AddSessionPage extends React.Component {
     const format = "DD/MM/YYYY";
     return (
       <div>
+        <NavigationBar className="nav"> </NavigationBar>
         <Breadcrumb className="troski">
           <Breadcrumb.Item href="/">Почетна</Breadcrumb.Item>
           <Breadcrumb.Item href="/session">Сесии</Breadcrumb.Item>

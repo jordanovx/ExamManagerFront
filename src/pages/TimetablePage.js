@@ -11,7 +11,7 @@ import {
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Breadcrumb from "react-bootstrap/Breadcrumb";
-
+import NavigationBar from "../components/NavigationBar";
 class TimetablePage extends React.Component {
   constructor(props) {
     super(props);
@@ -49,6 +49,7 @@ class TimetablePage extends React.Component {
   render() {
     return (
       <div>
+        <NavigationBar className="nav"> </NavigationBar>
         <Breadcrumb className="troski">
           <Breadcrumb.Item href="/">Почетна</Breadcrumb.Item>
           <Breadcrumb.Item href="/addsubjects">Распоред</Breadcrumb.Item>
