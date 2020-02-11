@@ -15,14 +15,25 @@ import NavigationBar from "../components/NavigationBar";
 class TimetablePage extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { selected: "hour" };
+    this.state = {selected: "hour"};
+    this.state = {
+      data:
+          [
+            {
+              Id: 1,
+              Subject: 'Explosion of Betelgeuse Star',
+              StartTime: new Date(2020, 2, 10, 11, 30),
+              EndTime: new Date(2020, 2, 10, 13, 0)
+            }
+            ]
+    };
   }
   selectChangeEvent(event) {
     console.log(event.target.value);
     this.setState({ selected: event.target.value });
   }
   getTimetable() {
-    fetch("http://localhost:8080/timetables", {
+    fetch("http://localhost:8080/schedule", {
       mode: "cors",
       method: "GET",
       headers: {
@@ -57,7 +68,19 @@ class TimetablePage extends React.Component {
         </Breadcrumb>
         <Row className="justify-content-md-center">
           <Col xs lg="11">
-            <ScheduleComponent>
+            <ScheduleComponent eventSettings={{ dataSource: {
+                data:
+                    [
+                      {
+                        Id: 1,
+                        Subject: 'Explosion of Betelgeuse Star',
+                        StartTime: new Date(2020, 2, 10, 11, 30),
+                        EndTime: new Date(2020, 2, 10, 13, 0)
+                      }
+                    ]
+              }
+            } }
+            >
               <Inject services={[Day, Week, WorkWeek, Month, Agenda]} />
             </ScheduleComponent>
           </Col>
