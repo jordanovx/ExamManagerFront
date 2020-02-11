@@ -22,16 +22,18 @@ class AddTimeTablePage extends React.Component {
     this.state = { allowed_extensions: ["csv", "xls", "xlsx"] };
   }
 
-  getClassrooms = () => {
-    fetch("http://localhost:8080/classrooms", {
+  uploadFile = (file) => {
+    let data = new FormData();
+    data.append("file", file);
+    fetch("http://localhost:8080/schedule/upload", {
       mode: "cors",
 
-      method: "GET",
+      method: "POST",
       headers: {
-        Accept: "application/json",
-        "Content-Type": "application/json"
-        // 'Content-Type': 'application/x-www-form-urlencoded',
-      }
+
+      },
+      body: data
+
     })
       .then(res => res.text())
       .then(
@@ -73,6 +75,8 @@ class AddTimeTablePage extends React.Component {
     this.setState({ file_name: files[0].name });
     this.setState({ file_extension: extension });
     this.setState({ file_size: files[0].size });
+
+    this.uploadFile(files[0]);
   };
 
   componentDidMount = () => {};
