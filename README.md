@@ -9,5 +9,5 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 To learn React, check out the [React documentation](https://reactjs.org/).
 
 ### Изработиле
-- Христијан Јорданов (https://github.com/jordanovx)
-- Стефан Трајковски (https://gitlab.com/trajkovskigg)
+- Front-end: Христијан Јорданов (https://github.com/jordanovx)
+- Back-end: Стефан Трајковски (https://gitlab.com/trajkovskigg)
